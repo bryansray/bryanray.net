@@ -1,0 +1,7 @@
+<h2>My Recent Thoughts</h2>
+
+<section class="recent-posts posts">
+  {{ range first 6 (where .Site.RegularPages "Section" "posts") }}
+    {{ .Render "li" }}
+  {{ end }}
+</section>

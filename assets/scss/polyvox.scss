@@ -1,0 +1,21 @@
+@import "variables";
+@import "base";
+@import "content";
+@import "navigation";
+@import "pagination";
+@import "footer";
+@import "posts";
+@import "bookshelf";
+
+.sidebar a.resume {
+  display: block;
+  text-align: center;
+  border-top: 1px solid #c4d4f3;
+  border-bottom: 1px solid #c4d4f3;
+  padding: 1rem 0;
+
+  &:hover {
+    border-color: initial;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,52 @@
+.recent-posts {
+  display: flex;
+  flex-wrap: wrap;
+
+    @media (min-width: 768px) {
+      article.post {
+        flex-basis: 50%;
+
+        &:nth-of-type(even) {
+          padding-left: 20px;
+        }
+        &:nth-of-type(odd) {
+          padding-right: 20px;
+        }
+      }
+  }
+
+  .summary {
+    text-align: justify;
+    text-justify: inter-word;
+    min-height: 110px;
+  }
+}
+
+.posts {
+  .title {
+    letter-spacing: -1px;
+  }
+
+  .title a {
+    color: #3a3a3a;
+
+    &:hover {
+      color: #1565c0;
+    }
+  }
+
+  
+}
+
+.post .metadata {
+  color: $alt-fg-color;
+  letter-spacing: 1px;
+
+  .author {
+    text-transform: uppercase;
+  }
+}
+
+.post article.content {
+  max-width: 600px;
+}

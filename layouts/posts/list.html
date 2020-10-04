@@ -1,0 +1,10 @@
+
+{{ define "main" }}
+<main>
+    <article class="posts">
+        {{ range .Pages }}
+            {{ .Render "li" }}
+        {{ end }}
+    </article>
+</main>
+{{ end }}

@@ -1,28 +1,31 @@
 baseURL = "https://www.bryanray.net/"
 languageCode = "en-us"
 title = "BryanRay.NET"
-theme = "hugo-coder"
 
 paginate = 20
 canonifyurls = true
 
 pygmentsstyle = "bw"
+pygmentsUseClasses=true
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 disqusShortname = "bryanray"
+
+[permalinks]
+  posts = "/:year/:month/:slug"
 
 [params]
     author = "Bryan Ray"
     info = "Life, Leadership & Software"
     description = "I'm not a great developer, I'm a decent developer with great habits."
     keywords = "blog,developer,leadership,personal"
-    avatarurl = "images/avatar.jpg"
+    avatarurl = "images/bryanray-headshot.jpeg"
 
     favicon_32 = "/img/favicon-32x32.png"
     favicon_16 = "/img/favicon-16x16.png"
 
-    footercontent = "Built with ♥️ using Hugo & Forestry"
+    footercontent = "Built with ♥️"
 
     hidecredits = false
     hidecopyright = false
@@ -30,31 +33,19 @@ disqusShortname = "bryanray"
     rtl = false
 
     math = true
-    # custom_css = ["css/main.css"]
-
-# Social links
-[[params.social]]
-    name = "Github"
-    icon = "fab fa-github fa-2x"
-    weight = 1
-    url = "https://github.com/bryansray/"
-[[params.social]]
-    name = "Gitlab"
-    icon = "fab fa-gitlab fa-2x"
-    weight = 2
-    url = "https://gitlab.com/bryansray/"
-[[params.social]]
-    name = "Twitter"
-    icon = "fab fa-twitter fa-2x"
-    weight = 3
-    url = "https://twitter.com/bryanray/"
+    custom_css = ["syntax.css"]
+    custom_scss = ["/scss/main.scss"]
 
 # Menu links
 [[menu.main]]
     name = "Blog"
     weight = 1
-    url  = "/posts/"
+    url  = "/posts"
+[[menu.main]]
+    name = "Bookshelf"
+    weight = 2
+    url = "/bookshelf"
 [[menu.main]]
     name = "About"
-    weight = 2
-    url = "/about/"
+    weight = 3
+    url = "/about"

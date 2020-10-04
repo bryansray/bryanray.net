@@ -1,0 +1,17 @@
+  {{ if and (isset .Site.Params "avatarurl") (not (isset .Site.Params "gravatar")) }}
+    {{ with .Site.Params.avatarurl }}
+      <section class="heading" style="text-align: center; margin: 2.5rem 0;">
+        <a style="color: black;" href="/">
+          <img class="avatar" src="{{ . | relURL }}" alt="avatar" />
+        </a>
+        <h1>{{ $.Site.Params.author }}</h1>
+        <h2>{{ $.Site.Params.description }}</h2>
+      </section>
+    {{ end }}
+  {{ end }}
+  
+  <a class="resume" target="_blank" href="/content/resume.pdf">Infographic Resume</a>
+
+  <p>I focus on building software, teams, culture & companies. I've worked with a lot of people, technologies, and have helped build companies and products that range from niche to enterprise.</p>
+
+  <p>I'd love to hear about how I can help you. You can find me on Twitter, LinkedIn, Github, or shoot me an email.</p>

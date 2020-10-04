@@ -1,0 +1,51 @@
+{{ define "main" }}
+  <section id="main" class="post">
+    <h1 id="title">{{ .Title }}</h1>
+
+    <div style="display: flex;" class="metadata">
+      <div style="flex: 1">
+        <span class="word-count"><b>{{ .WordCount }}</b> Total Words</span>
+        <span class="time-to-read text-right">{{ .ReadingTime }} minute read</span>
+      </div>
+
+      <div style="flex: 1" class="text-right">
+        <span class="timestamp">{{ .Date.Format "January 2, 2006" }}</span> 
+        by <span class="author">{{ $.Param "author" }}</span>
+      </div>
+    </div> 
+
+    <article id="content" class="content">
+      {{ .Content }}
+    </article>
+  </section>
+
+  <aside id="meta">
+    <div>
+      {{ with .Params.topics }}
+        <ul id="topics">
+          {{ range . }}
+            <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    
+      {{ with .Params.tags }}
+        <ul id="tags">
+          {{ range . }}
+            <li> <a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </div>
+
+    <div style="display: flex;">
+      {{ with .PrevInSection }}
+        <div style="flex: 1"><a class="previous" href="{{.Permalink}}"> {{.Title}}</a></div>
+      {{ end }}
+
+      {{ with .NextInSection }}
+        <div style="flex: 1" class="text-right"><a class="next" href="{{.Permalink}}"> {{.Title}}</a></div>
+      {{ end }}
+    </div>
+  </aside>
+{{ end }}
