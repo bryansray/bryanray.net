@@ -10,6 +10,7 @@ pygmentsUseClasses=true
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
+googleAnalytics = "UA-5104363-1"
 disqusShortname = "bryanray"
 
 [permalinks]
