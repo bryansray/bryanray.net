@@ -33,7 +33,7 @@ disqusShortname = "bryanray"
     rtl = false
 
     math = true
-    custom_css = ["syntax.css"]
+    custom_css = ["/css/syntax.css"]
     custom_scss = ["/scss/main.scss"]
 
 # Menu links
