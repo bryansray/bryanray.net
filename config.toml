@@ -23,9 +23,6 @@ disqusShortname = "bryanray"
     keywords = "blog,developer,leadership,personal"
     avatarurl = "images/bryanray-headshot.jpeg"
 
-    favicon_32 = "/img/favicon-32x32.png"
-    favicon_16 = "/img/favicon-16x16.png"
-
     footercontent = "Built with ♥️"
 
     hidecredits = false
