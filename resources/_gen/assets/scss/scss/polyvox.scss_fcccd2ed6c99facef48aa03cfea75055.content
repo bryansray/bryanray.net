@@ -331,4 +331,10 @@ img.avatar {
     border-color: initial;
     font-weight: 300; }
 
+.infographic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden; }
+
 /*# sourceMappingURL=polyvox.css.map */
