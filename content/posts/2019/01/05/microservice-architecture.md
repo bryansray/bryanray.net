@@ -1,7 +1,7 @@
 ---
 title: "Microservice Architecture"
 date: 2019-01-05T14:14:46-05:00
-draft: false
+tags: ["microservices", "programming"]
 ---
 
 We'll be taking a look at the microservice architecture. We’ll look at some of the problems microservices can cause. And also some of the bigger architectural issues that can occur in the future.

@@ -1,6 +1,7 @@
 ---
 title: "Google Chrome Debugging"
 date: 2019-01-10T08:17:45-05:00
+tags: ["programming", "debugging"]
 ---
 
 Google Chrome is a very popular web browser used by many web developers today. With a very quick release cycle and a powerful set of  developer features turned the browser into a must have tool. 

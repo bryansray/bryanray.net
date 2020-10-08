@@ -1,6 +1,7 @@
 ---
 title: "From Linode to Light Sail on AWS"
 date: 2019-03-03T14:05:46-05:00
+tags: ["linode", "aws", "lightsail"]
 ---
 
 Most of the companies that I have worked for began moving their products to the “cloud” (read, “other peoples computers”). These companies have been mostly Microsoft shops, so Azure has been the obvious choice. Azure has a great user interface, a great set of services, and all the black magic pricing that AWS comes with.

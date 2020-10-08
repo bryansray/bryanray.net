@@ -1,6 +1,7 @@
 ---
 title: "Using Go to Build Out a RESTful API"
 date: 2019-03-19T14:46:33-05:00
+tags: ["programming", "go"]
 ---
 
 I see a lot of the benefit of Go. It’s “simple.” The stdlib is great. However, nothing ever seems to scratch the surface more than “look … I can start a web server using the stdlib and serve a single endpoint. It’s great!” Finding a good article or book that describes how to organize your (web) application seems extremely rare.
