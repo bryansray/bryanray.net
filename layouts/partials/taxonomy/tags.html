@@ -1,0 +1,5 @@
+<ul id="tags" class="tags">
+  {{ range . }}
+    <li><a class="tag" href="{{ ( printf "tags/%s" ( . | urlize ) ) | relLangURL }}">{{ . }}</a> </li>
+  {{ end }}
+</ul>

@@ -29,13 +29,7 @@
         </ul>
       {{ end }}
     
-      {{ with .Params.tags }}
-        <ul id="tags">
-          {{ range . }}
-            <li> <a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
-          {{ end }}
-        </ul>
-      {{ end }}
+      {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
     </div>
 
     <div style="display: flex;">
