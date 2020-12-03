@@ -4,6 +4,8 @@ date: 2020-09-24T22:36:40-05:00
 tags: ["politics"]
 ---
 
+Just some random political thoughts that I had during this whole pandemic and drama filled 2020 ...
+
 Politics for many people has essentially become a combination of religion (literally) and a lifestyle brand. The religious leaders that they follow tell them - in no uncertain terms - how to live, and that their politics are a part of that. Politics have turned into something that is moralized, and at issue absolutely everywhere.
 
 As a result, politics becomes a key part of identity and decision-making. From actual political matters (like abortion, taxes, gun rights, etc.) to other things (like the grocery store you shop at, what brand of shoes you wear, and how you dress). Seriously. I know several families who won’t shop at Whole Foods or Sprouts because the idea of “organic” is anathema to them, politically. It would be … _sinful_ to do something like that.
