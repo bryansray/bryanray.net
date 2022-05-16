@@ -1,34 +1,35 @@
 *,
 *:after,
 *:before {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 62.5%;
 }
 
 body {
   color: $fg-color;
   background-color: $bg-color;
-	font-family: $text-font-family;
-	font-size: 1.6em;
-	font-weight: 300;
+  font-family: $text-font-family;
+  font-size: 1.6em;
+  font-weight: 300;
   line-height: 1.5em;
-  @media only screen and (max-width : 768px) {
+  @media only screen and (max-width: 768px) {
     font-size: 1.6em;
     line-height: 1.6em;
   }
 }
 
-html, body {
+html,
+body {
   min-height: 100vh;
 }
 
 a {
   color: $link-color;
-  text-decoration: none;
+  text-decoration: underline;
 
   &:hover {
     color: $link-color-hover;
@@ -53,23 +54,23 @@ h6 {
 h1 {
   font-size: 3.2rem;
   line-height: 3.6rem;
-  @media only screen and (max-width : 768px) {
-    font-size: 3.0rem;
+  @media only screen and (max-width: 768px) {
+    font-size: 3rem;
     line-height: 3.4rem;
   }
 }
 h2 {
   font-size: 2.8rem;
   line-height: 3.2rem;
-  @media only screen and (max-width : 768px) {
+  @media only screen and (max-width: 768px) {
     font-size: 2.6rem;
-    line-height: 3.0rem;
+    line-height: 3rem;
   }
 }
 h3 {
   font-size: 2.4rem;
   line-height: 2.8rem;
-  @media only screen and (max-width : 768px) {
+  @media only screen and (max-width: 768px) {
     font-size: 2.2rem;
     line-height: 2.6rem;
   }
@@ -77,15 +78,15 @@ h3 {
 h4 {
   font-size: 2.2rem;
   line-height: 2.6rem;
-  @media only screen and (max-width : 768px) {
-    font-size: 2.0rem;
+  @media only screen and (max-width: 768px) {
+    font-size: 2rem;
     line-height: 2.4rem;
   }
 }
 h5 {
-  font-size: 2.0rem;
+  font-size: 2rem;
   line-height: 2.4rem;
-  @media only screen and (max-width : 768px) {
+  @media only screen and (max-width: 768px) {
     font-size: 1.8rem;
     line-height: 2.2rem;
   }
@@ -93,13 +94,14 @@ h5 {
 h6 {
   font-size: 1.8rem;
   line-height: 2.2rem;
-  @media only screen and (max-width : 768px) {
+  @media only screen and (max-width: 768px) {
     font-size: 1.6rem;
-    line-height: 2.0rem;
+    line-height: 2rem;
   }
 }
 
-b, strong {
+b,
+strong {
   font-weight: 700;
 }
 
@@ -135,20 +137,22 @@ code {
 
 blockquote {
   border-left: 2px solid $alt-bg-color;
-  padding-left: 2.0rem;
+  padding-left: 2rem;
   line-height: 2.2rem;
   font-weight: 400;
   font-style: italic;
   margin-inline-start: 10px;
 }
 
-th, td {
+th,
+td {
   padding: 1.6rem;
 }
 table {
   border-collapse: collapse;
 }
-table td, table th {
+table td,
+table th {
   border: 2px solid $alt-fg-color;
 }
 table tr:first-child th {
@@ -224,7 +228,7 @@ figure {
 img.emoji {
   height: 1em;
   width: 1em;
-  margin: 0 .05em 0 .1em;
+  margin: 0 0.05em 0 0.1em;
   vertical-align: -0.1em;
 }
 
