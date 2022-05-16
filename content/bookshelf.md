@@ -1,4 +1,3 @@
 ---
-title: "Bookshelf"
-type: "bookshelf"
+layout: bookshelf
 ---
