@@ -2,7 +2,6 @@
 title: "My Management Style"
 date: 2022-05-16T12:39:16-05:00
 tags: ["management", "development"]
-draft: true
 ---
 
 As I've progressed throughout my career, I've moved a bit up and down the development and management ladder, depending on what the company has needed. Sometimes we need more of a focus on management and sometimes we need more of a focus on development. The pendulum swings back and forth quite a bit.
