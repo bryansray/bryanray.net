@@ -1,10 +1,7 @@
-
 {{ define "main" }}
-<main>
-    <article class="posts">
-        {{ range .Pages }}
-            {{ .Render "li" }}
-        {{ end }}
-    </article>
+<main style="max-width: 65ch">
+  <article class="posts">
+    {{ range .Pages }} {{ .Render "li" }} {{ end }}
+  </article>
 </main>
 {{ end }}

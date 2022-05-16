@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section class="books d-flex">
+  {{ range .Site.Data.books }}
+  <section class="book">
+    <img src="{{ .image_path }}" />
+
+    <a
+      href="{{ .url }}"
+      target="_blank"
+      style="display: block"
+      class="title block"
+      >{{ .title }}</a
+    >
+  </section>
+  {{ end }}
+</section>
+{{ end }}
