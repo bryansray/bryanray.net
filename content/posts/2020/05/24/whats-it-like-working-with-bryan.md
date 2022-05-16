@@ -3,11 +3,17 @@ title: "What's It Like Working With Bryan?"
 date: 2020-05-24T21:34:53-05:00
 ---
 
-I have a strong desire to be efficient and effective. 
+I wanted to put together a list of things that I find to be my strengths and weaknesses. I'm continually working to improve my strengths and minimize or compliment any weaknesses that I have. It's never easy to reflect on these things and improve upon them, but I love to figure out how I can continually make myself better! Or surround myself with others who can help me be better!
+
+<!--more-->
+
+I have a strong desire to be efficient and effective.
 
 I prefer communication through written form. Short and long form asyncronous discussion via a system like Discourse or email.
 
 I like the philosophy of stoicism. I do not like ego. I like doing the right thing. I like to see obstacles as ways to grow. I’m big on self reflection and ensuring that I adjust and change accordingly to adapt.
+
+<!--more-->
 
 If I notice problems, inefficiencies, or ineffectiveness I try to find and propose solutions. This has a tendency to not work well in established environments and I have recognized that and have learned to manage it accordingly.
 
@@ -28,6 +34,7 @@ I am an ambivert leaning more towards introvert. I understand the importance of 
 Communication and having a “voice” is important to me. I have no problem with my opinions or ideas being respectfully discussed or declined.
 
 ## Weaknesses
+
 I can sometimes become overly passionate about solutions. Sometimes that passion can come across as aggressiveness. I’m acutely aware of it though and I do my best to reign it in. It has gotten better as I have gotten older.
 
 I can be overly organized at times. I like to have systems in place to support my natural tendencies to be disorganized and inefficient, but when I don’t have the ability to help supplant my weaknesses, I can become frustrated.
@@ -39,6 +46,3 @@ I don’t like to make too many trade offs for short-term wins vs long term main
 I can sometimes be naive when it comes to the complexity of certain things. I think this may be human nature, but I tend to always start off as “it shouldn’t be this hard” and then once I start digging in to the problem will quickly realize “oh, that’s why this is hard”
 
 I can sometimes stretch myself too thin. I tend to get overly involved in ideas and they can often times quickly consume me. Having someone set priorities for me is extremely helpful to counteract this.
-
-
-
