@@ -4,8 +4,9 @@
   </h3>
 
   <div class="metadata text-right">
-    <span class="timestamp">{{ .PublishDate.Format "Mon, January 2, 2006" }}</span> by
-    <span class="author">{{ $.Param "author" }}</span>
+    <span class="timestamp"
+      >{{ .PublishDate.Format "Mon, January 2, 2006" }}</span
+    >
 
     <!-- <div>
       <span class="word-count"><b>{{ .WordCount }}</b> Total Words</span> | 
@@ -16,9 +17,9 @@
   <div class="summary">{{ .Summary }}</div>
 
   {{ if .Truncated }}
-    <!-- This <div> includes a read more link, but only if the summary is truncated... -->
-    <div class="read-more text-right">
-      <a href="{{ .RelPermalink }}">Read More</a>
-    </div>
+  <!-- This <div> includes a read more link, but only if the summary is truncated... -->
+  <div class="read-more text-right">
+    <a href="{{ .RelPermalink }}">Read More</a>
+  </div>
   {{ end }}
 </article>

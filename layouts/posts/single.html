@@ -10,7 +10,6 @@
 
       <div style="flex: 1" class="text-right">
         <span class="timestamp">{{ .Date.Format "January 2, 2006" }}</span> 
-        by <span class="author">{{ $.Param "author" }}</span>
       </div>
     </div> 
 
@@ -20,7 +19,7 @@
   </section>
 
   <aside id="meta">
-    <div>
+    <div style="margin: 1rem 0;">
       {{ with .Params.topics }}
         <ul id="topics">
           {{ range . }}
@@ -32,7 +31,7 @@
       {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
     </div>
 
-    <div style="display: flex;">
+    <div style="display: flex; margin: 1rem 0;">
       {{ with .PrevInSection }}
         <div style="flex: 1"><a class="previous" href="{{.Permalink}}"> {{.Title}}</a></div>
       {{ end }}
