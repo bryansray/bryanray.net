@@ -2,13 +2,14 @@
 title: Behind every great man, there is a great woman.
 date: 2014-05-01T00:00:00-05:00
 ---
+
 **Day 1 of 31**: My long time friend, colleague, and mentor, [Curtis Schlak](http://curtis.schlak.com/), asked me to be accountabili-buddies and begin creating the written word with him. Everyday … for the entire month of May. It's quite the endeavor, but how can one possibly turn down such a challenge?
 
 It's been a long time since I've written, but I've always enjoyed it and this is an attempt to form a new habit. One that doesn't involve caffeine, nicotine, opiates, alcohol, sex, drugs, or rock and roll. Just some good ol' fashioned creativity, wordsmithing, and a boat load of know-how.
 
-So, let's get this party started, shall we? Here is [Curtis's first Blog-a-day May](http://curtis.schlak.com/2014/05/01/blog-a-day-may.html) (good marketing!) post as well!
+<!--more-->
 
-<hr />
+So, let's get this party started, shall we? Here is [Curtis's first Blog-a-day May](http://curtis.schlak.com/2014/05/01/blog-a-day-may.html) (good marketing!) post as well!
 
 This has always been one of my favorite quotes. It's a quote that I've known for a long time. I always thought I knew what it meant, but until recently, I can honestly say that I didn't truly appreciate the quote to its fullest.
 
@@ -16,7 +17,7 @@ Over the past couple years, my life has gone through some pretty wonderful chang
 
 Throughout all of that, my wife, Lindsey, has been the cornerstone of everything I've been able to accomplish. She's been through everything with me and has helped me make tough decisions. She's been at my side through every choice I've had to make and I've always felt like she's had my back no matter what choice I made. Even if I had the possibility of making the wrong choice, or failing at something.
 
-This post is my way of awknowleding all the hard work and sacrifice that I probably don't let her know how much I appreciate often enough.
+This post is my way of acknowledging all the hard work and sacrifice that I probably don't let her know how much I appreciate often enough.
 
 ### She provides self-confidence and support
 
