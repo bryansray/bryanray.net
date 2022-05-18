@@ -16,6 +16,9 @@ disqusShortname = "bryanray"
 [permalinks]
   posts = "/:year/:month/:slug"
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [params]
     author = "Bryan Ray"
     info = "Life, Leadership & Software"
