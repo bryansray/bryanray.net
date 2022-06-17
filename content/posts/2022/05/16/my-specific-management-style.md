@@ -1,10 +1,10 @@
 ---
-title: "My Management Style"
+title: "My Leadership Style"
 date: 2022-05-16T12:39:16-05:00
-tags: ["management", "development"]
+tags: ["management", "leadership", "development"]
 ---
 
-As I've progressed throughout my career, I've moved a bit up and down the development and management ladder, depending on what the company has needed. Sometimes we need more of a focus on management and sometimes we need more of a focus on development. The pendulum swings back and forth quite a bit.
+As I've progressed throughout my career, I've moved a bit up and down the development, leadership, and management ladder. Depending on what the company or team has needed. Sometimes we need more of a focus on management and sometimes we need more of a focus on development. The pendulum swings back and forth quite a bit.
 
 I also realize that as you move forward in your career from junior, to senior, to architect role, and even management specific roles ... managing people and working with others becomes more and more important. I truly enjoy helping other people progress their careers as well, their development skills, and just helping people navigate through difficult situations. I don't always have the answers, but I tend to be a great listener! One of the perks of being raised with four sisters who had a lot to talk to me about, I guess.
 
