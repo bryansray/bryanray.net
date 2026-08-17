@@ -6,46 +6,42 @@ paginate = 20
 canonifyurls = true
 
 pygmentsstyle = "bw"
-pygmentsUseClasses=true
+pygmentsUseClasses = true
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 disqusShortname = "bryanray"
 
 [permalinks]
-  posts = "/:year/:month/:slug"
+posts = "/:year/:month/:slug"
 
 [markup.goldmark.renderer]
-  unsafe = true
+unsafe = true
 
 [params]
-    author = "Bryan Ray"
-    info = "Life, Leadership & Software"
-    description = "I'm not a great developer, I'm a decent developer with great habits."
-    keywords = "blog,developer,leadership,personal"
-    avatarurl = "images/bryanray-headshot.jpeg"
+author = "Bryan Ray"
+info = "Life, Leadership & Software"
+description = "I'm not a great developer, I'm a decent developer with great habits."
+keywords = "blog,developer,leadership,personal"
+avatarurl = "images/bryanray-headshot.jpeg"
 
-    footercontent = "Built with ♥️"
+footercontent = "Built with ♥️"
 
-    hidecredits = false
-    hidecopyright = false
+hidecredits = false
+hidecopyright = false
 
-    rtl = false
+rtl = false
 
-    math = true
-    custom_css = ["/css/syntax.css"]
-    custom_scss = ["/scss/main.scss"]
+math = true
+custom_css = ["/css/syntax.css"]
+custom_scss = ["/scss/main.scss"]
 
 # Menu links
 [[menu.main]]
-    name = "Blog"
-    weight = 1
-    url  = "/posts"
+name = "Blog"
+weight = 1
+url = "/posts"
 [[menu.main]]
-    name = "Bookshelf"
-    weight = 2
-    url = "/bookshelf"
-[[menu.main]]
-    name = "About"
-    weight = 3
-    url = "/about"
+name = "Bookshelf"
+weight = 2
+url = "/bookshelf"
