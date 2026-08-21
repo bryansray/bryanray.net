@@ -1,0 +1,66 @@
+name: Renew Object Storage TLS certificate
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 8 1 * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: renew-object-storage-tls
+  cancel-in-progress: false
+
+jobs:
+  renew:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      LINODE_TOKEN: ${{ secrets.LINODE_TLS_TOKEN }}
+      LEGO_VERSION: 5.3.1
+      LEGO_SHA256: b3c71b122ee1947eacfe0b809b955647f6377239fe4bfc49f73b1a091ae1252a
+      DOMAIN: www.bryanray.net
+      BUCKET_REGION: us-southeast
+      BUCKET_NAME: www.bryanray.net
+
+    steps:
+      - name: Install lego
+        run: |
+          archive="lego_v${LEGO_VERSION}_linux_amd64.tar.gz"
+          curl --fail --silent --show-error --location \
+            --output "$RUNNER_TEMP/$archive" \
+            "https://github.com/go-acme/lego/releases/download/v${LEGO_VERSION}/$archive"
+          echo "${LEGO_SHA256}  $RUNNER_TEMP/$archive" | sha256sum --check
+          tar -xzf "$RUNNER_TEMP/$archive" -C "$RUNNER_TEMP" lego
+
+      - name: Issue certificate with DNS-01
+        env:
+          LINODE_TTL: 300
+        run: |
+          "$RUNNER_TEMP/lego" run \
+            --accept-tos \
+            --email bryan@bryanray.net \
+            --dns linode \
+            --dns.propagation.wait 360s \
+            --domains "$DOMAIN" \
+            --path "$RUNNER_TEMP/lego-data"
+
+      - name: Inspect certificate
+        run: |
+          openssl x509 \
+            -in "$RUNNER_TEMP/lego-data/certificates/$DOMAIN.crt" \
+            -noout -subject -issuer -dates -ext subjectAltName
+
+      - name: Upload certificate to Linode Object Storage
+        run: |
+          jq --null-input \
+            --rawfile certificate "$RUNNER_TEMP/lego-data/certificates/$DOMAIN.crt" \
+            --rawfile private_key "$RUNNER_TEMP/lego-data/certificates/$DOMAIN.key" \
+            '{certificate: $certificate, private_key: $private_key}' \
+          | curl --fail-with-body --silent --show-error \
+              --request POST \
+              --header "Authorization: Bearer $LINODE_TOKEN" \
+              --header "Content-Type: application/json" \
+              --data-binary @- \
+              "https://api.linode.com/v4/object-storage/buckets/$BUCKET_REGION/$BUCKET_NAME/ssl"
