@@ -54,6 +54,11 @@ jobs:
 
       - name: Upload certificate to Linode Object Storage
         run: |
+          curl --fail-with-body --silent --show-error \
+            --request DELETE \
+            --header "Authorization: Bearer $LINODE_TOKEN" \
+            "https://api.linode.com/v4/object-storage/buckets/$BUCKET_REGION/$BUCKET_NAME/ssl"
+
           jq --null-input \
             --rawfile certificate "$RUNNER_TEMP/lego-data/certificates/$DOMAIN.crt" \
             --rawfile private_key "$RUNNER_TEMP/lego-data/certificates/$DOMAIN.key" \

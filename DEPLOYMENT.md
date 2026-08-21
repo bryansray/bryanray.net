@@ -74,7 +74,8 @@ document routing for `/` and directory paths.
 Certificate renewal is not automatic merely because the certificate is stored
 on the bucket. The `Renew Object Storage TLS certificate` GitHub Actions
 workflow issues a fresh Let's Encrypt certificate with a Linode DNS-01
-challenge on the first day of each month, then uploads it to this bucket. It
+challenge on the first day of each month, validates it, then replaces the
+certificate on this bucket. It
 uses the repository secret `LINODE_TLS_TOKEN`, whose Linode API token is limited
 to `domains:read_write` and `object_storage:read_write` scopes and expires on
 August 20, 2027. Rotate the token and update the secret before that date.
