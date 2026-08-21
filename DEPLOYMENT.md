@@ -71,6 +71,37 @@ to the Object Storage endpoint, `/index.html` returns `200` while `/` returns
 production `www` DNS record until an edge proxy or another host provides index
 document routing for `/` and directory paths.
 
+## Cloudflare edge proxy
+
+The Cloudflare Worker `bryanray-site-proxy` runs the source in
+`cloudflare/worker.js`. It proxies `www` to Linode's HTTP website endpoint so
+index-document routing works, converts Linode's missing-object `403` response
+to a proper `404`, and redirects the apex domain to `www`.
+
+The Worker has these routes in the pending `bryanray.net` Cloudflare zone:
+
+```text
+bryanray.net/*
+www.bryanray.net/*
+```
+
+The Worker preview URL is
+`https://bryanray-site-proxy.bryansray.workers.dev`. Before activation it was
+verified against the home page, a clean directory URL, a post, CSS, an image,
+and a missing page.
+
+Cloudflare assigned these authoritative nameservers:
+
+```text
+aaden.ns.cloudflare.com
+isla.ns.cloudflare.com
+```
+
+Activation requires replacing the five Linode nameservers at Namecheap with
+these two Cloudflare nameservers. The staged Cloudflare zone contains the five
+Google Workspace MX records, SPF and ACME TXT records, the proxied apex and
+`www` records, and DNS-only `equipmac` and `pve` A records.
+
 Certificate renewal is not automatic merely because the certificate is stored
 on the bucket. The `Renew Object Storage TLS certificate` GitHub Actions
 workflow issues a fresh Let's Encrypt certificate with a Linode DNS-01
