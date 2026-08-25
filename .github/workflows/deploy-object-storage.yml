@@ -19,7 +19,7 @@ jobs:
     timeout-minutes: 15
     env:
       HUGO_VERSION: 0.165.0
-      HUGO_SHA256: f43494894cdf4a8630a201d5c828051c77f523cc66bb3938b30806835470ac20
+      HUGO_SHA256: 5c3a37a5450b3e386e5b75a87a790fea2d04a796d75e171216c80ef48a32b432
       LINODE_BUCKET: www.bryanray.net
       LINODE_ENDPOINT: https://us-southeast-1.linodeobjects.com
       AWS_DEFAULT_REGION: us-east-1
@@ -29,9 +29,9 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v6
 
-      - name: Install Hugo Extended
+      - name: Install Hugo
         run: |
-          archive="hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          archive="hugo_${HUGO_VERSION}_linux-amd64.tar.gz"
           curl --fail --silent --show-error --location \
             --output "$RUNNER_TEMP/$archive" \
             "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/$archive"

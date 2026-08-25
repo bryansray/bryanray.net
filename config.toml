@@ -33,8 +33,6 @@ hidecopyright = false
 rtl = false
 
 math = true
-custom_css = ["/css/syntax.css"]
-custom_scss = ["/scss/main.scss"]
 
 # Menu links
 [[menu.main]]

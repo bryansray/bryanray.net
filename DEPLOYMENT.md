@@ -52,10 +52,10 @@ variables → Actions**:
 | `LINODE_OBJECT_STORAGE_ACCESS_KEY` | The access key ID for the bucket-limited deployment key |
 | `LINODE_OBJECT_STORAGE_SECRET_KEY` | The corresponding secret key |
 
-The workflow pins Hugo Extended to a verified version, validates the downloaded
+The workflow pins standard Hugo to a verified version, validates the downloaded
 archive checksum, builds the production site, and then synchronizes `public/`
-to the `www.bryanray.net` bucket. The sync uses `--delete`, so the bucket
-remains an exact copy of the generated site.
+to the `www.bryanray.net` bucket. The sync uses `--delete`, so the bucket remains
+an exact copy of the generated site.
 
 ## Test before changing DNS
 
