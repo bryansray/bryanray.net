@@ -54,3 +54,41 @@ jobs:
             public/ "s3://$LINODE_BUCKET/" \
             --acl public-read \
             --delete
+
+          # HTML must revalidate so a deploy is visible immediately. Hugo's
+          # fingerprinted stylesheet can be cached permanently.
+          aws --endpoint-url "$LINODE_ENDPOINT" s3 cp \
+            public/ "s3://$LINODE_BUCKET/" \
+            --recursive \
+            --exclude "*" \
+            --include "*.html" \
+            --acl public-read \
+            --cache-control "no-cache" \
+            --content-type "text/html"
+          aws --endpoint-url "$LINODE_ENDPOINT" s3 cp \
+            public/css/ "s3://$LINODE_BUCKET/css/" \
+            --recursive \
+            --exclude "*" \
+            --include "site.*.css" \
+            --acl public-read \
+            --cache-control "public, max-age=31536000, immutable" \
+            --content-type "text/css"
+
+      - name: Purge Cloudflare cache
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN"
+          zone_id="$({
+            curl --fail-with-body --silent --show-error \
+              --header "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+              --header "Content-Type: application/json" \
+              "https://api.cloudflare.com/client/v4/zones?name=bryanray.net&status=active"
+          } | jq --exit-status --raw-output '.result | if length == 1 then .[0].id else error("expected one active bryanray.net zone") end')"
+          curl --fail-with-body --silent --show-error \
+            --request POST \
+            --header "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            --header "Content-Type: application/json" \
+            --data '{"purge_everything":true}' \
+            "https://api.cloudflare.com/client/v4/zones/$zone_id/purge_cache" \
+            | jq --exit-status '.success == true' >/dev/null

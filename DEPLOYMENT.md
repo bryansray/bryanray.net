@@ -51,11 +51,15 @@ variables → Actions**:
 | --- | --- |
 | `LINODE_OBJECT_STORAGE_ACCESS_KEY` | The access key ID for the bucket-limited deployment key |
 | `LINODE_OBJECT_STORAGE_SECRET_KEY` | The corresponding secret key |
+| `CLOUDFLARE_API_TOKEN` | A Cloudflare API token with `Zone:Read` and `Cache Purge:Purge` permissions for the `bryanray.net` zone |
 
 The workflow pins standard Hugo to a verified version, validates the downloaded
 archive checksum, builds the production site, and then synchronizes `public/`
 to the `www.bryanray.net` bucket. The sync uses `--delete`, so the bucket remains
-an exact copy of the generated site.
+an exact copy of the generated site. HTML is uploaded with `no-cache`, while
+Hugo's fingerprinted stylesheet is cached as immutable for one year. After the
+upload succeeds, the workflow purges the Cloudflare zone so visitors see the
+new deployment immediately.
 
 ## Test before changing DNS
 
@@ -95,7 +99,9 @@ document routing for `/` and directory paths.
 The Cloudflare Worker `bryanray-site-proxy` runs the source in
 `cloudflare/worker.js`. It proxies `www` to Linode's HTTP website endpoint so
 index-document routing works, converts Linode's missing-object `403` response
-to a proper `404`, and redirects the apex domain to `www`.
+to a proper `404`, and redirects the apex domain to `www`. HTML responses must
+revalidate, fingerprinted CSS and JavaScript are cached for one year, and other
+static assets are cached for one hour.
 
 The Worker has these routes in the pending `bryanray.net` Cloudflare zone:
 

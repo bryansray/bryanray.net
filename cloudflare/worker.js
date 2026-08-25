@@ -22,12 +22,21 @@ export default {
     origin.hostname = ORIGIN_HOST;
     origin.port = "";
 
+    const isHtml =
+      origin.pathname.endsWith("/") ||
+      origin.pathname.endsWith(".html") ||
+      !origin.pathname.split("/").pop().includes(".");
+    const isFingerprintedAsset = /\.[0-9a-f]{64}\.(?:css|js)$/.test(
+      origin.pathname,
+    );
+    const cacheTtl = isHtml ? 0 : isFingerprintedAsset ? 31536000 : 3600;
+
     const originResponse = await fetch(origin.toString(), {
       method: request.method,
       redirect: "manual",
       cf: {
         cacheEverything: true,
-        cacheTtl: 3600,
+        cacheTtl,
       },
     });
 
@@ -37,6 +46,14 @@ export default {
     headers.delete("content-length");
     headers.delete("x-amz-request-id");
     headers.set("x-content-type-options", "nosniff");
+    headers.set(
+      "cache-control",
+      isHtml
+        ? "no-cache"
+        : isFingerprintedAsset
+          ? "public, max-age=31536000, immutable"
+          : "public, max-age=3600",
+    );
 
     return new Response(originResponse.body, {
       status,
