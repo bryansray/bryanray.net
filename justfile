@@ -10,7 +10,7 @@ default:
 
 # Build the production site into public/.
 build:
-    hugo
+    hugo --noBuildLock
 
 # Remove Hugo-generated output and cache files.
 clean:
@@ -18,11 +18,14 @@ clean:
 
 # Serve the site locally.
 serve:
-    hugo server
+    hugo server --noBuildLock
 
-# Serve locally with drafts, future posts, and expired content enabled.
-develop:
-    hugo server --buildDrafts --buildFuture --buildExpired
+# Run the local development server with unpublished content included.
+dev:
+    hugo server --noBuildLock --environment development --buildDrafts --buildFuture --buildExpired
+
+# Backwards-compatible long name for `dev`.
+develop: dev
 
 # Preview the files that would be deployed.
 deploy-dry-run: build

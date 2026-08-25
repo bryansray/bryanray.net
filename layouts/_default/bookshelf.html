@@ -1,6 +1,6 @@
 {{ define "main" }}
 <section class="books d-flex">
-  {{ range .Site.Data.books }}
+  {{ range hugo.Data.books }}
   <section class="book">
     <img src="{{ .image_path }}" />
 

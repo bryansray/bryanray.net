@@ -1,1 +1,1 @@
-<section style="max-width: 65ch">{{ .Content }}</section>
+<article class="article shell"><header class="article-header"><p class="eyebrow">{{ .Section | default "Bryan Ray" }}</p>{{ with .Title }}<h1>{{ . }}</h1>{{ end }}</header><div class="article-body">{{ .Content }}</div></article>

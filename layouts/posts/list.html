@@ -1,7 +1,1 @@
-{{ define "main" }}
-<main style="max-width: 65ch">
-  <article class="posts">
-    {{ range .Pages }} {{ .Render "li" }} {{ end }}
-  </article>
-</main>
-{{ end }}
+{{ define "main" }}<header class="page-header shell"><p class="eyebrow">Notes from along the way</p><h1>The notebook</h1><p>Software, personal projects, things I’m learning, and random moments from life.</p></header><section class="archive shell"><div class="post-list">{{ range .Pages }}{{ partial "post-card.html" . }}{{ end }}</div></section>{{ end }}

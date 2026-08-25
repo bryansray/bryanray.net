@@ -1,0 +1,5 @@
+- title: "Plate Bingo"
+  description: "A family-friendly iPhone road trip game for spotting all 50 US state license plates."
+  url: "/plate-bingo/"
+  icon: "◎"
+  tags: ["iOS", "SwiftUI", "Family"]

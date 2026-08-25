@@ -1,0 +1,1 @@
+{{ define "main" }}<header class="page-header shell"><p class="eyebrow">Designed and built</p><h1>Apps</h1><p>Small, focused products made to be useful, respectful, and pleasant to use.</p></header><section class="collection shell"><div class="work-grid">{{ range hugo.Data.apps }}{{ partial "work-card.html" (dict "item" . "kind" "App") }}{{ end }}</div></section>{{ end }}

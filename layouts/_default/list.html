@@ -1,0 +1,1 @@
+{{ define "main" }}<header class="page-header shell"><p class="eyebrow">Archive</p><h1>{{ .Title }}</h1>{{ with .Description }}<p>{{ . }}</p>{{ end }}</header><section class="archive shell"><div class="post-list">{{ range .Pages }}{{ partial "post-card.html" . }}{{ end }}</div></section>{{ end }}

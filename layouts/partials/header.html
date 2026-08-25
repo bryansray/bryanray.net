@@ -1,16 +1,18 @@
-<header class="header">
-  <nav class="navigation">
-    <ul class="navigation-list">
-      <li class="navigation-item">
-        <a href="/" class="navigation-link">Home</a>
-      </li>
-      {{ with .Site.Menus.main}}
-        {{ range sort . }}
-          <li class="navigation-item">
-            <a class="navigation-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
-          </li>
-        {{ end }}
-      {{ end }}
-    </ul>
+<header class="site-header">
+  <nav class="navigation shell" aria-label="Primary navigation">
+    <a class="wordmark" href="{{ .Site.Home.RelPermalink }}" aria-label="Bryan Ray, home"><span class="wordmark-mark">BR</span><span>Bryan Ray</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu"><span class="sr-only">Toggle menu</span><span></span><span></span><span></span></button>
+    <div class="primary-menu" id="primary-menu">
+      <a href="{{ "posts/" | relURL }}">Notebook</a>
+      <div class="nav-dropdown">
+        <button type="button" aria-expanded="false">Things I’ve built <span aria-hidden="true">⌄</span></button>
+        <div class="dropdown-menu">
+          <a href="{{ "apps/" | relURL }}"><strong>Apps</strong><small>Products I’ve designed and built</small></a>
+          <a href="{{ "open-source/" | relURL }}"><strong>Open source</strong><small>Code shared with the community</small></a>
+        </div>
+      </div>
+      <a href="{{ "bookshelf/" | relURL }}">Bookshelf</a><a href="{{ "about/" | relURL }}">About</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">◐</button>
+    </div>
   </nav>
 </header>

@@ -1,0 +1,5 @@
+- title: "bryanray.net"
+  description: "The source for this site: a fast, accessible publishing system built with Hugo."
+  url: "https://github.com/bryansray/bryanray.net"
+  icon: "⌘"
+  tags: ["Hugo", "SCSS", "Open source"]
