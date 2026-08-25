@@ -38,6 +38,25 @@ website URL and custom-domain TLS have both been verified.
 The deploy uses `--delete`, so files removed from the generated Hugo site are
 also removed from the bucket. The dry run is the safe way to inspect this first.
 
+## Automatic deployment from GitHub
+
+The `Deploy site to Linode Object Storage` GitHub Actions workflow builds and
+publishes the site whenever a commit is pushed to `main`. It can also be run
+manually from the repository's **Actions** tab.
+
+Create these repository Actions secrets under **Settings → Secrets and
+variables → Actions**:
+
+| Secret | Value |
+| --- | --- |
+| `LINODE_OBJECT_STORAGE_ACCESS_KEY` | The access key ID for the bucket-limited deployment key |
+| `LINODE_OBJECT_STORAGE_SECRET_KEY` | The corresponding secret key |
+
+The workflow pins Hugo Extended to a verified version, validates the downloaded
+archive checksum, builds the production site, and then synchronizes `public/`
+to the `www.bryanray.net` bucket. The sync uses `--delete`, so the bucket
+remains an exact copy of the generated site.
+
 ## Test before changing DNS
 
 Open the bucket's website URL and verify the home page, a post, CSS/images, and

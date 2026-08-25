@@ -1,0 +1,56 @@
+name: Deploy site to Linode Object Storage
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-object-storage-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      HUGO_VERSION: 0.165.0
+      HUGO_SHA256: f43494894cdf4a8630a201d5c828051c77f523cc66bb3938b30806835470ac20
+      LINODE_BUCKET: www.bryanray.net
+      LINODE_ENDPOINT: https://us-southeast-1.linodeobjects.com
+      AWS_DEFAULT_REGION: us-east-1
+      AWS_EC2_METADATA_DISABLED: "true"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Install Hugo Extended
+        run: |
+          archive="hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          curl --fail --silent --show-error --location \
+            --output "$RUNNER_TEMP/$archive" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/$archive"
+          echo "${HUGO_SHA256}  $RUNNER_TEMP/$archive" | sha256sum --check
+          tar -xzf "$RUNNER_TEMP/$archive" -C "$RUNNER_TEMP" hugo
+          echo "$RUNNER_TEMP" >> "$GITHUB_PATH"
+
+      - name: Build production site
+        run: hugo --gc --minify --noBuildLock
+
+      - name: Deploy to Object Storage
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.LINODE_OBJECT_STORAGE_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.LINODE_OBJECT_STORAGE_SECRET_KEY }}
+        run: |
+          test -n "$AWS_ACCESS_KEY_ID"
+          test -n "$AWS_SECRET_ACCESS_KEY"
+          aws --version
+          aws --endpoint-url "$LINODE_ENDPOINT" s3 sync \
+            public/ "s3://$LINODE_BUCKET/" \
+            --acl public-read \
+            --delete
