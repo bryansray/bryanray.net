@@ -3,15 +3,22 @@
 {{- $title := cond .IsHome .Site.Title (printf "%s · %s" .Title .Site.Title) -}}
 {{- $isArticle := in (slice "posts" "videos") .Section -}}
 
-{{/* Social card image. Front matter `images` wins; otherwise the headshot, served
-     square because the source is 750x750 and upscaling it into a 1200x630 card looks
-     soft. Move to summary_large_image once generated per-post cards land. */}}
+{{/* Social card image. Front matter `images` wins; otherwise a 1200x630 card
+     generated from the page title. The headshot remains a last resort for anything
+     with no title to draw. */}}
 {{- $ogImage := "" -}}
+{{- $ogWide := false -}}
 {{- with .Params.images -}}
   {{- $ogImage = (index . 0) | absURL -}}
 {{- else -}}
-  {{- with resources.Get $.Site.Params.avatar -}}
-    {{- $ogImage = (.Process "resize 750x jpeg q82").Permalink -}}
+  {{- with partial "og-image.html" $ -}}
+    {{- $ogImage = . -}}
+    {{- $ogWide = true -}}
+  {{- end -}}
+  {{- if not $ogImage -}}
+    {{- with resources.Get $.Site.Params.avatar -}}
+      {{- $ogImage = (.Process "resize 750x jpeg q82").Permalink -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 
@@ -29,7 +36,11 @@
 <meta property="og:url" content="{{ .Permalink }}">
 {{- with $ogImage }}
 <meta property="og:image" content="{{ . }}">
-<meta property="og:image:alt" content="{{ $.Site.Params.author }}">
+<meta property="og:image:alt" content="{{ cond $ogWide (printf "%s — %s" ($.Title | default $.Site.Title) $.Site.Title) $.Site.Params.author }}">
+{{- if $ogWide }}
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+{{- end }}
 {{- end }}
 {{- if $isArticle }}
 <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
@@ -42,7 +53,7 @@
 {{- end }}
 {{- end }}
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="{{ cond $ogWide "summary_large_image" "summary" }}">
 <meta name="twitter:title" content="{{ $title }}">
 <meta name="twitter:description" content="{{ $description }}">
 {{- with $ogImage }}

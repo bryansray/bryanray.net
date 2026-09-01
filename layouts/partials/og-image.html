@@ -1,0 +1,49 @@
+{{- /* Generates a 1200x630 social card by overlaying the page title on the shared
+       background in assets/images/og-card.png. The mark, wordmark, and footer are
+       baked into that background, so only the title is drawn here.
+
+       images.Text needs a TTF or OTF, which is why assets/fonts keeps one alongside
+       the WOFF2 faces the site actually serves; it is read at build time and never
+       published. It also does not wrap, so the greedy wrap below is by character
+       count, deliberately conservative because wide capitals overrun sooner. */ -}}
+
+{{- $title := cond .IsHome (.Site.Params.info | default .Site.Title) .Title -}}
+{{- $bg := resources.Get "images/og-card.png" -}}
+{{- $font := resources.Get "fonts/Muli-ExtraBold.ttf" -}}
+{{- $out := "" -}}
+
+{{- if and $title $bg $font -}}
+  {{- $max := 28 -}}
+  {{- $lines := slice -}}{{- $cur := "" -}}
+  {{- range (split $title " ") -}}
+    {{- $try := cond (eq $cur "") . (printf "%s %s" $cur .) -}}
+    {{- if le (len $try) $max -}}
+      {{- $cur = $try -}}
+    {{- else -}}
+      {{- $lines = $lines | append $cur -}}{{- $cur = . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if ne $cur "" -}}{{- $lines = $lines | append $cur -}}{{- end -}}
+
+  {{/* Four lines is the most that fits between the wordmark and the footer rule. */}}
+  {{- if gt (len $lines) 4 -}}
+    {{- $lines = (first 3 $lines) | append (printf "%s …" (index $lines 3)) -}}
+  {{- end -}}
+
+  {{/* Shrink the type as the title grows, then centre the block in the space
+       between the wordmark (ends ~130) and the footer rule (starts ~528). */}}
+  {{- $n := len $lines -}}
+  {{- $size := cond (ge $n 4) 50 (cond (eq $n 3) 56 62) -}}
+  {{- $lh := div (mul $size 126) 100 -}}
+  {{- $top := sub 320 (div (mul $lh $n) 2) -}}
+
+  {{- $img := $bg -}}
+  {{- range $i, $line := $lines -}}
+    {{- $img = $img | images.Filter (images.Text $line (dict
+          "color" "#f7f3eb" "size" $size "x" 70 "y" (add $top (mul $i $lh)) "font" $font)) -}}
+  {{- end -}}
+
+  {{/* Key the filename on the title so pages sharing one (paginated lists) share a file. */}}
+  {{- $out = ($img | resources.Copy (printf "og/%s.png" (substr (sha256 $title) 0 16))).Permalink -}}
+{{- end -}}
+{{- return $out -}}
