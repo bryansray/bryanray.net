@@ -1,8 +1,8 @@
 @import './syntax.css';
 
-@font-face { font-family: Muli; src: url('/fonts/muli/Muli-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
-@font-face { font-family: Muli; src: url('/fonts/muli/Muli-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
-@font-face { font-family: Muli; src: url('/fonts/muli/Muli-ExtraBold.ttf') format('truetype'); font-weight: 800; font-display: swap; }
+@font-face { font-family: Muli; src: url('/fonts/muli/Muli-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: Muli; src: url('/fonts/muli/Muli-Bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: Muli; src: url('/fonts/muli/Muli-ExtraBold.woff2') format('woff2'); font-weight: 800; font-display: swap; }
 
 :root { --paper:#f7f3eb; --surface:#fffdf8; --ink:#16233b; --muted:#667085; --line:#d7dbe2; --accent:#df5b37; --accent-dark:#b53e20; --blue:#214f7d; --band:#214f7d; --soft-blue:#dce7f4; --shadow:0 20px 50px rgba(22,35,59,.12); color-scheme:light; }
 :root[data-theme="dark"] { --paper:#101826; --surface:#182235; --ink:#f3f5f8; --muted:#aab5c6; --line:#35445b; --accent:#ff805e; --accent-dark:#ff9c81; --blue:#a9c8ef; --band:#1d3c62; --soft-blue:#263852; --shadow:0 20px 50px rgba(0,0,0,.3); color-scheme:dark; }
