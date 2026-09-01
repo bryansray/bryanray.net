@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-  <meta name="description" content="{{ .Description | default (.Summary | plainify | default .Site.Params.description) }}">
   <meta name="theme-color" content="#f7f3eb">
+  {{ partial "head-meta.html" . }}
+  {{ partial "schema.html" . }}
   <link rel="preload" as="font" type="font/woff2" href="{{ "/fonts/muli/Muli-Regular.woff2" | relURL }}" crossorigin>
   {{ $cssOptions := dict "externals" (slice "/fonts/*") "minify" true "targetPath" "css/site.css" }}
   {{ $styles := resources.Get "css/site.css" | css.Build $cssOptions | fingerprint }}

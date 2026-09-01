@@ -4,6 +4,7 @@ title = "Bryan Ray"
 
 paginate = 20
 canonifyurls = true
+enableRobotsTXT = true
 
 pygmentsstyle = "bw"
 pygmentsUseClasses = true

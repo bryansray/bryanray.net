@@ -1,0 +1,57 @@
+{{/* Summaries carry the source markdown's line breaks; collapse them so meta content stays on one line. */}}
+{{- $description := .Description | default (.Summary | plainify | htmlUnescape | replaceRE "\\s+" " " | truncate 200) | default .Site.Params.description -}}
+{{- $title := cond .IsHome .Site.Title (printf "%s · %s" .Title .Site.Title) -}}
+{{- $isArticle := in (slice "posts" "videos") .Section -}}
+
+{{/* Social card image. Front matter `images` wins; otherwise the headshot, served
+     square because the source is 750x750 and upscaling it into a 1200x630 card looks
+     soft. Move to summary_large_image once generated per-post cards land. */}}
+{{- $ogImage := "" -}}
+{{- with .Params.images -}}
+  {{- $ogImage = (index . 0) | absURL -}}
+{{- else -}}
+  {{- with resources.Get $.Site.Params.avatar -}}
+    {{- $ogImage = (.Process "resize 750x jpeg q82").Permalink -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $pageFeed := "" -}}{{- with .OutputFormats.Get "rss" }}{{ $pageFeed = .Permalink }}{{ end -}}
+{{- $siteFeed := "" -}}{{- with .Site.Home.OutputFormats.Get "rss" }}{{ $siteFeed = .Permalink }}{{ end -}}
+
+<meta name="description" content="{{ $description }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="{{ .Site.Language.Lang }}">
+<meta property="og:type" content="{{ cond $isArticle "article" "website" }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{- with $ogImage }}
+<meta property="og:image" content="{{ . }}">
+<meta property="og:image:alt" content="{{ $.Site.Params.author }}">
+{{- end }}
+{{- if $isArticle }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+{{- if .Lastmod.After .Date }}
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+{{- end }}
+<meta property="article:author" content="{{ .Site.Params.author }}">
+{{- range .Params.tags }}
+<meta property="article:tag" content="{{ . }}">
+{{- end }}
+{{- end }}
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+{{- with $ogImage }}
+<meta name="twitter:image" content="{{ . }}">
+{{- end }}
+
+{{- with $pageFeed }}
+<link rel="alternate" type="application/rss+xml" title="{{ $title }}" href="{{ . }}">
+{{- end }}
+{{- if and $siteFeed (ne $siteFeed $pageFeed) }}
+<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ $siteFeed }}">
+{{- end }}
