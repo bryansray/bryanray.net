@@ -110,6 +110,10 @@ h1,h2,h3 { margin:0; font-weight:800; line-height:1.08; letter-spacing:-.045em; 
 .archive-year time { flex:none; width:64px; color:var(--muted); font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; }
 .archive-year a { font-size:18px; font-weight:700; text-decoration:none; }
 .archive-year a:hover { color:var(--accent); }
+.pager { display:flex; align-items:center; justify-content:space-between; gap:20px; max-width:900px; margin-top:55px; padding-top:30px; border-top:1px solid var(--line); font-size:14px; font-weight:800; }
+.pager a { text-decoration:none; }
+.pager a:hover { color:var(--accent); }
+.pager-status { color:var(--muted); font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; }
 .article { max-width:900px; padding-block:70px 110px; }
 .article-header { margin-bottom:55px; }
 .article-header .back-link { display:inline-block; margin-bottom:55px; color:var(--muted); font-size:13px; font-weight:700; text-decoration:none; }

@@ -2,7 +2,6 @@ baseURL = "https://www.bryanray.net/"
 locale = "en-US"
 title = "Bryan Ray"
 
-paginate = 20
 canonifyurls = true
 enableRobotsTXT = true
 
@@ -12,6 +11,9 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 disqusShortname = "bryanray"
+
+[pagination]
+pagerSize = 20
 
 [taxonomies]
 tag = "tags"
