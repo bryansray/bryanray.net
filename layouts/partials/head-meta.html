@@ -8,12 +8,15 @@
      with no title to draw. */}}
 {{- $ogImage := "" -}}
 {{- $ogWide := false -}}
+{{- $pageTitle := .Title | default .Site.Title -}}
+{{- $ogAlt := .Site.Params.author -}}
 {{- with .Params.images -}}
   {{- $ogImage = (index . 0) | absURL -}}
 {{- else -}}
   {{- with partial "og-image.html" $ -}}
     {{- $ogImage = . -}}
     {{- $ogWide = true -}}
+    {{- $ogAlt = cond (eq $pageTitle $.Site.Title) $.Site.Title (printf "%s — %s" $pageTitle $.Site.Title) -}}
   {{- end -}}
   {{- if not $ogImage -}}
     {{- with resources.Get $.Site.Params.avatar -}}
@@ -36,7 +39,7 @@
 <meta property="og:url" content="{{ .Permalink }}">
 {{- with $ogImage }}
 <meta property="og:image" content="{{ . }}">
-<meta property="og:image:alt" content="{{ cond $ogWide (printf "%s — %s" ($.Title | default $.Site.Title) $.Site.Title) $.Site.Params.author }}">
+<meta property="og:image:alt" content="{{ $ogAlt }}">
 {{- if $ogWide }}
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
