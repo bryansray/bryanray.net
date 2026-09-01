@@ -1,17 +1,10 @@
-{{ define "main" }}
-<section class="books d-flex">
-  {{ range hugo.Data.books }}
-  <section class="book">
-    <img src="{{ .image_path }}" />
-
-    <a
-      href="{{ .url }}"
-      target="_blank"
-      style="display: block"
-      class="title block"
-      >{{ .title }}</a
-    >
-  </section>
-  {{ end }}
-</section>
-{{ end }}
+{{ define "main" }}<header class="page-header shell"><p class="eyebrow">What I’m reading</p><h1>Bookshelf</h1><p>Books that have shaped how I think about software, teams, and the work of building things with other people.</p></header><ul class="books">{{ range hugo.Data.books }}
+  {{- $title := .title -}}
+  {{- $cover := resources.Get (strings.TrimPrefix "/" .image_path) -}}
+  <li class="book"><a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+    {{- with $cover -}}
+      {{- $x1 := .Process "fill 160x240 center webp q80" -}}
+      {{- $x2 := .Process "fill 320x480 center webp q72" -}}
+      <img src="{{ $x1.RelPermalink }}" srcset="{{ $x1.RelPermalink }} 1x, {{ $x2.RelPermalink }} 2x" alt="Cover of {{ $title }}" width="160" height="240" loading="lazy" decoding="async">
+    {{- end -}}
+    <span class="title">{{ $title }}</span></a></li>{{ end }}</ul>{{ end }}

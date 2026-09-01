@@ -1,0 +1,15 @@
+{{- /* Markdown images resolve against assets/ so they go through Hugo image
+       processing; anything not found there falls back to a plain tag. */ -}}
+{{- $asset := resources.Get (strings.TrimPrefix "/" .Destination) -}}
+{{- with $asset -}}
+  {{- $wide := gt .Width 720 -}}
+  {{- $base := cond $wide (.Process "resize 720x webp q80") (.Process "webp q82") -}}
+  {{- $srcset := slice (printf "%s %dw" $base.RelPermalink $base.Width) -}}
+  {{- if gt .Width $base.Width -}}
+    {{- $retina := .Process (printf "resize %dx webp q72" (math.Min .Width (mul $base.Width 2))) -}}
+    {{- $srcset = $srcset | append (printf "%s %dw" $retina.RelPermalink $retina.Width) -}}
+  {{- end -}}
+  <img src="{{ $base.RelPermalink }}" srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 760px) 100vw, 720px" width="{{ $base.Width }}" height="{{ $base.Height }}" alt="{{ $.Text }}"{{ with $.Title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
+{{- else -}}
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
+{{- end -}}

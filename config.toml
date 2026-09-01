@@ -2,15 +2,14 @@ baseURL = "https://www.bryanray.net/"
 locale = "en-US"
 title = "Bryan Ray"
 
-paginate = 20
 canonifyurls = true
+enableRobotsTXT = true
 
-pygmentsstyle = "bw"
-pygmentsUseClasses = true
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
+[pagination]
+pagerSize = 20
 
-disqusShortname = "bryanray"
+[taxonomies]
+tag = "tags"
 
 [permalinks]
 posts = "/:year/:month/:slug"
@@ -18,12 +17,17 @@ posts = "/:year/:month/:slug"
 [markup.goldmark.renderer]
 unsafe = true
 
+[markup.highlight]
+noClasses = false
+codeFences = true
+guessSyntax = true
+
 [params]
 author = "Bryan Ray"
 info = "Code, Projects & Life"
 description = "A developer's notebook about software, personal projects, and the moments in between."
 keywords = "blog,developer,software,projects,personal"
-avatarurl = "images/bryanray-headshot.jpeg"
+avatar = "images/bryanray-headshot.jpeg"
 
 footercontent = "Built with ♥️"
 

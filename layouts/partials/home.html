@@ -1,6 +1,21 @@
 <section class="hero shell">
   <div class="hero-copy"><p class="eyebrow">Code · Projects · Life</p><h1>I build things,<br>follow curiosities,<br>and share the journey.</h1><p class="hero-lede">I’m Bryan Ray—a developer who enjoys turning ideas into working software. This is my notebook for code, personal projects, experiments, and moments from life worth remembering.</p><div class="hero-actions"><a class="button button-primary" href="{{ "posts/" | relURL }}">Read the notebook</a><a class="button button-secondary" href="{{ "apps/" | relURL }}">See what I’m building <span>↗</span></a></div></div>
-  <div class="hero-portrait"><div class="portrait-frame"><img src="{{ .Site.Params.avatarurl | relURL }}" alt="Bryan Ray" width="520" height="520"></div><div class="availability"><span></span> Always making something</div></div>
+  <div class="hero-portrait">
+    <div class="portrait-frame">
+      {{- $portrait := resources.Get .Site.Params.avatar }}
+      {{- $fallback := $portrait.Process "resize 520x jpeg q78" }}
+      {{- $srcset := slice }}
+      {{- range slice 400 600 750 }}
+        {{- $variant := $portrait.Process (printf "resize %dx webp q74" .) }}
+        {{- $srcset = $srcset | append (printf "%s %dw" $variant.RelPermalink $variant.Width) }}
+      {{- end }}
+      <picture>
+        <source type="image/webp" sizes="(max-width: 850px) 85vw, 30vw" srcset="{{ delimit $srcset ", " }}">
+        <img src="{{ $fallback.RelPermalink }}" alt="Bryan Ray" width="{{ $fallback.Width }}" height="{{ $fallback.Height }}" decoding="async">
+      </picture>
+    </div>
+    <div class="availability"><span></span> Always making something</div>
+  </div>
 </section>
 <section class="home-section shell"><div class="section-heading"><div><p class="eyebrow">From the notebook</p><h2>Latest notes</h2></div><a class="text-link" href="{{ "posts/" | relURL }}">Browse the notebook →</a></div><div class="post-grid">{{ range first 3 (where .Site.RegularPages "Section" "posts") }}{{ partial "post-card.html" . }}{{ end }}</div></section>
 {{ $work := slice }}

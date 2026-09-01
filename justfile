@@ -12,6 +12,11 @@ default:
 build:
     hugo --noBuildLock
 
+# Build with path warnings surfaced, then check the output for broken internal links.
+check:
+    hugo --noBuildLock --printPathWarnings
+    @if command -v lychee >/dev/null 2>&1; then lychee --no-progress --offline --root-dir "$PWD/public" public; else echo "lychee not installed; skipping link check (brew install lychee)"; fi
+
 # Remove Hugo-generated output and cache files.
 clean:
     rm -rf public resources .hugo_build.lock

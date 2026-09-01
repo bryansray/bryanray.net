@@ -13,3 +13,4 @@ $RECYCLE.BIN/
 .DS_Store
 
 .hugo_build.lock
+.todos/
