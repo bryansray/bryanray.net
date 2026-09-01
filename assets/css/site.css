@@ -119,10 +119,11 @@ h1,h2,h3 { margin:0; font-weight:800; line-height:1.08; letter-spacing:-.045em; 
 .article-nav a { display:flex; flex-direction:column; text-decoration:none; }
 .article-nav .next { text-align:right; }
 .article-nav small { color:var(--muted); text-transform:uppercase; }
-.books { display:grid; grid-template-columns:repeat(4,1fr); gap:28px; max-width:1180px; margin:0 auto; padding:0 24px 100px; }
+.books { display:grid; grid-template-columns:repeat(4,1fr); gap:28px; max-width:1180px; margin:0 auto; padding:55px 24px 110px; list-style:none; }
 .book { text-align:center; }
+.book a { display:block; text-decoration:none; }
 .book img { width:160px; height:240px; object-fit:cover; margin:0 auto 14px; border-radius:5px; box-shadow:var(--shadow); }
-.book .title { font-size:14px; font-weight:700; }
+.book .title { display:block; font-size:14px; font-weight:700; }
 
 .site-footer { padding-top:65px; background:var(--ink); color:var(--paper); }
 [data-theme="dark"] .site-footer { background:#0b100e; color:#f7f3eb; }
