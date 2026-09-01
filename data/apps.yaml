@@ -1,3 +1,9 @@
+- title: "Neighborly"
+  description: "A kinder country-guessing game that uses distance, direction, and neighboring-country hints to help you find the mystery country."
+  url: "https://neighborly.bryanray.net/"
+  icon: "🌍"
+  tags: ["SolidJS", "Geography", "Family"]
+
 - title: "Plate Bingo"
   description: "A family-friendly iPhone road trip game for spotting all 50 US state license plates."
   url: "/plate-bingo/"
