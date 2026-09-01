@@ -134,6 +134,8 @@ h1,h2,h3 { margin:0; font-weight:800; line-height:1.08; letter-spacing:-.045em; 
 .article-body blockquote { margin:35px 0; padding:3px 0 3px 25px; border-left:3px solid var(--accent); color:var(--muted); font-style:italic; }
 .article-body table { display:block; max-width:100%; overflow:auto; border-collapse:collapse; font-family:Muli,sans-serif; font-size:14px; }
 .article-body th,.article-body td { padding:10px 14px; border-bottom:1px solid var(--line); text-align:left; }
+.related { margin-top:70px; }
+.related h2 { margin-bottom:10px; font-size:23px; }
 .article-nav { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:70px; padding-top:30px; border-top:1px solid var(--line); }
 .article-nav a { display:flex; flex-direction:column; text-decoration:none; }
 .article-nav .next { text-align:right; }

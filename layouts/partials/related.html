@@ -1,0 +1,22 @@
+{{- $page := . -}}
+{{- $pool := where .Site.RegularPages "Section" "in" (slice "posts" "videos") -}}
+
+{{/* The chronological prev/next links sit directly below this block, so drop those
+     two from the suggestions rather than showing the same post twice. */}}
+{{- $skip := slice $page.RelPermalink -}}
+{{- with $page.PrevInSection }}{{ $skip = $skip | append .RelPermalink }}{{ end -}}
+{{- with $page.NextInSection }}{{ $skip = $skip | append .RelPermalink }}{{ end -}}
+
+{{- $related := slice -}}
+{{- range ($pool.Related $page) -}}
+  {{- if and (lt (len $related) 3) (not (in $skip .RelPermalink)) -}}
+    {{- $related = $related | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- with $related }}
+<section class="related" aria-labelledby="related-heading">
+  <h2 id="related-heading">Related reading</h2>
+  <div class="post-grid">{{ range . }}{{ partial "post-card.html" . }}{{ end }}</div>
+</section>
+{{- end }}

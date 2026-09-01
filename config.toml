@@ -5,6 +5,22 @@ title = "Bryan Ray"
 canonifyurls = true
 enableRobotsTXT = true
 
+# Related content is scored on shared tags, with a light nudge toward posts of a
+# similar vintage. includeNewer matters here: the default only ever surfaces older
+# posts, which would leave the 2008 material with no suggestions at all.
+[related]
+threshold = 60
+includeNewer = true
+toLower = true
+
+[[related.indices]]
+name = "tags"
+weight = 100
+
+[[related.indices]]
+name = "date"
+weight = 10
+
 [pagination]
 pagerSize = 20
 
