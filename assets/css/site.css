@@ -4,8 +4,8 @@
 @font-face { font-family: Muli; src: url('/fonts/muli/Muli-Bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
 @font-face { font-family: Muli; src: url('/fonts/muli/Muli-ExtraBold.woff2') format('woff2'); font-weight: 800; font-display: swap; }
 
-:root { --paper:#f7f3eb; --surface:#fffdf8; --ink:#16233b; --muted:#667085; --line:#d7dbe2; --accent:#df5b37; --accent-dark:#b53e20; --blue:#214f7d; --band:#214f7d; --soft-blue:#dce7f4; --shadow:0 20px 50px rgba(22,35,59,.12); color-scheme:light; }
-:root[data-theme="dark"] { --paper:#101826; --surface:#182235; --ink:#f3f5f8; --muted:#aab5c6; --line:#35445b; --accent:#ff805e; --accent-dark:#ff9c81; --blue:#a9c8ef; --band:#1d3c62; --soft-blue:#263852; --shadow:0 20px 50px rgba(0,0,0,.3); color-scheme:dark; }
+:root { --paper:#f7f3eb; --surface:#fffdf8; --ink:#16233b; --muted:#667085; --line:#d7dbe2; --accent:#df5b37; --accent-dark:#b53e20; --blue:#214f7d; --band:#214f7d; --soft-blue:#dce7f4; --shadow:0 20px 50px rgba(22,35,59,.12); --code-bg:#f3efe6; color-scheme:light; }
+:root[data-theme="dark"] { --paper:#101826; --surface:#182235; --ink:#f3f5f8; --muted:#aab5c6; --line:#35445b; --accent:#ff805e; --accent-dark:#ff9c81; --blue:#a9c8ef; --band:#1d3c62; --soft-blue:#263852; --shadow:0 20px 50px rgba(0,0,0,.3); --code-bg:#0d1420; color-scheme:dark; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; background:var(--paper); color:var(--ink); font:400 17px/1.7 Muli,system-ui,sans-serif; -webkit-font-smoothing:antialiased; }

@@ -12,6 +12,5 @@ document.addEventListener('keydown', (event) => {
   if (dropdownButton?.getAttribute('aria-expanded') === 'true') { closeDropdown(); dropdownButton.focus(); return; }
   if (menuButton?.getAttribute('aria-expanded') === 'true') { closeMenu(); menuButton.focus(); }
 });
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) document.documentElement.dataset.theme = savedTheme;
-themeButton?.addEventListener('click', () => { const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; document.documentElement.dataset.theme = theme; localStorage.setItem('theme', theme); });
+// The theme itself is applied by the inline script in baseof.html; this only flips it.
+themeButton?.addEventListener('click', () => { const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; document.documentElement.dataset.theme = theme; try { localStorage.setItem('theme', theme); } catch (e) {} });
