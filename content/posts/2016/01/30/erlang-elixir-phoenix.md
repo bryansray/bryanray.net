@@ -2,7 +2,7 @@
 title: "Erlang, Elixir, & Phoenix"
 date: 2016-01-30T21:20:38-05:00
 draft: false
-tags: ["elixir"]
+tags: ["elixir", "languages"]
 ---
 
 Elixir has recently found a lot of success in the form of some very impressive performance metrics coming out of the Phoenix framework. The Phoenix team recently posted their impressive journey on the road to 2 million individual websocket connections. They also provided the process for their optimizations and gave some incites in to how they were able to achieve these results. 

@@ -1,7 +1,7 @@
 ---
 title: "daymark: Apple Calendar from the Command Line"
 date: 2026-04-05T09:00:00-05:00
-tags: ["swift", "macos", "projects"]
+tags: ["swift", "macos", "projects", "languages"]
 ---
 
 I built [daymark](https://github.com/bryansray/daymark), a small macOS command-line tool for reading Apple Calendar data from the terminal.
