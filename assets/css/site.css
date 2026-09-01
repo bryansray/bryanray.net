@@ -86,6 +86,10 @@ h1,h2,h3 { margin:0; font-weight:800; line-height:1.08; letter-spacing:-.045em; 
 .work-card p { color:var(--muted); font-size:15px; }
 .chip-row { display:flex; flex-wrap:wrap; gap:7px; margin:5px 0 25px; }
 .chip-row span,.tag-row a { padding:4px 9px; background:var(--soft-blue); border-radius:999px; font-size:11px; font-weight:700; text-decoration:none; }
+.term-list { display:flex; flex-wrap:wrap; gap:10px; margin:0; padding:0; list-style:none; }
+.term-list a { display:inline-flex; align-items:center; gap:9px; padding:9px 15px; background:var(--surface); border:1px solid var(--line); border-radius:999px; font-size:14px; font-weight:700; text-decoration:none; transition:.2s ease; }
+.term-list a:hover { border-color:var(--accent); color:var(--accent); }
+.term-list span { color:var(--muted); font-size:12px; font-weight:700; }
 .work-card>a { display:flex; justify-content:space-between; margin-top:auto; padding-top:18px; border-top:1px solid var(--line); font-size:13px; font-weight:800; text-decoration:none; }
 .callout { padding-block:115px; text-align:center; }
 .callout h2 { max-width:800px; margin-inline:auto; }

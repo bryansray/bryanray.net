@@ -13,6 +13,9 @@ pygmentscodefencesguesssyntax = true
 
 disqusShortname = "bryanray"
 
+[taxonomies]
+tag = "tags"
+
 [permalinks]
 posts = "/:year/:month/:slug"
 
