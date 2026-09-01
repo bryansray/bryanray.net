@@ -1,6 +1,7 @@
 ---
 title: "NodeJS and my side project: Huddle"
 date: 2014-05-07T00:00:00-05:00
+tags: ["writing", "javascript", "projects"]
 ---
 > Life is really simple, but we insist on making it complicated. - Confucius
 

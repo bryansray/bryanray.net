@@ -1,6 +1,7 @@
 ---
 title: "What's It Like Working With Bryan?"
 date: 2020-05-24T21:34:53-05:00
+tags: ["career", "leadership"]
 ---
 
 I wanted to put together a list of things that I find to be my strengths and weaknesses. I'm continually working to improve my strengths and minimize or compliment any weaknesses that I have. It's never easy to reflect on these things and improve upon them, but I love to figure out how I can continually make myself better! Or surround myself with others who can help me be better!

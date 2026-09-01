@@ -1,6 +1,7 @@
 ---
 title: "Advice to Junior Developers"
 date: 2023-01-15T09:00:00-05:00
+tags: ["career"]
 ---
 Being a junior developer is tough. There is a ton of learning that you have to do. Especially when it comes to technology and being an effective software developer. Not only from a technical standpoint, but also on the soft skills and learning how to navigate a team environment or a companies culture.
 

@@ -1,6 +1,7 @@
 ---
 title: Backbone.js and it's ilk ...
 date: 2013-04-18T00:00:00-05:00
+tags: ["javascript", "ruby"]
 ---
 For the past couple weeks I’ve spent some time getting back in to the Rails. Well, not particularly rails, but I used Rails to get a some playtime in with Backbone.js. I was a bit skeptical at first. I’ve never been a fan of “heavy” javascript front-ends, because they tend to produce massive amounts of untested code.
 

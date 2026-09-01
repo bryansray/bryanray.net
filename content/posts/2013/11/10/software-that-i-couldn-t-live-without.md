@@ -1,6 +1,7 @@
 ---
 title: Software that I couldn't live without.
 date: 2013-11-10T00:00:00-05:00
+tags: ["tools"]
 ---
 This is a list of software that I have found useful in some way or another over the past year. I’ve been using some of these tools since I started using a computer and others have been more recent. But, ultimately, I’ve found each of them to be extremely helpful at some point or another.
 

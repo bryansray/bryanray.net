@@ -1,6 +1,7 @@
 ---
 title: The importance of interacting with others.
 date: 2014-05-03T00:00:00-05:00
+tags: ["writing", "personal"]
 ---
 
 > Never lose sight of the fact that the most important yardstick of your success will be how you treat other people - your family, friends, and coworkers, and even strangers you meet along the way.

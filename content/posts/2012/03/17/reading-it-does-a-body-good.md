@@ -1,6 +1,7 @@
 ---
 title: Reading ... it does a body good.
 date: 2012-03-17T00:00:00-05:00
+tags: ["personal"]
 ---
 Been on a bit of a reading spree this month and just wanted to share what I’m currently immersed in and what I have coming up on the list. I’m currently reading Catcher in the Rye by the late J.D. Salinger. I can’t remember the number of times I’ve read this book and I’m not entirely sure why I like it so much.
 

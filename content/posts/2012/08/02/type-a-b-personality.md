@@ -1,6 +1,7 @@
 ---
 title: Type A(B) Personality.
 date: 2012-08-02T00:00:00-05:00
+tags: ["personal"]
 ---
 This past weekend, my wife told me that I was a Type A Personality. She didn’t mean it to be offensive by any means, but nonetheless, the statement threw me for a loop, because I had always considered myself as the opposite of a Type A (Type B).
 

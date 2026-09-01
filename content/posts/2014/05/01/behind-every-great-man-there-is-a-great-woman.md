@@ -1,6 +1,7 @@
 ---
 title: Behind every great man, there is a great woman.
 date: 2014-05-01T00:00:00-05:00
+tags: ["writing", "personal"]
 ---
 
 **Day 1 of 31**: My long time friend, colleague, and mentor, [Curtis Schlak](http://curtis.schlak.com/), asked me to be accountabili-buddies and begin creating the written word with him. Everyday … for the entire month of May. It's quite the endeavor, but how can one possibly turn down such a challenge?

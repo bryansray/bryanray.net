@@ -1,6 +1,7 @@
 ---
 title: Moving from WordPress to Jekyll
 date: 2010-11-11T19:18:20-05:00
+tags: ["this-site"]
 ---
 Over the past year, I've really fallen off the face of the internet. I know you've all missed me {sarcasm}, but I've recently had the urge to get back in to the swing of things.
 

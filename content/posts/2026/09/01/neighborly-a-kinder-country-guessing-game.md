@@ -1,7 +1,7 @@
 ---
 title: "Neighborly: A Kinder Country-Guessing Game"
 date: 2026-09-01T09:00:00-05:00
-tags: ["solidjs", "solidstart", "games", "family"]
+tags: ["javascript", "projects"]
 ---
 
 Over the weekend, I built [Neighborly](https://neighborly.bryanray.net/) for my daughter Kylie. It is a geography game where you try to find a mystery country, one guess at a time.

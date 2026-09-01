@@ -1,6 +1,7 @@
 ---
 title: An experiment in saving money ...
 date: 2010-06-09T19:18:20-05:00
+tags: ["personal"]
 ---
 This post doesn't have anything to do with development, but I've just been
 pretty excited about it and felt pretty inspired to write something about it.

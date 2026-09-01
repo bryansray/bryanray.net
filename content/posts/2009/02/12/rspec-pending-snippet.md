@@ -1,6 +1,7 @@
 ---
 title: An rSpec Pending Snippet
 date: 2009-02-12T19:18:20-05:00
+tags: ["ruby", "tools"]
 ---
 So I've been AFK from the blogging scene and pretty much any other scene that's imaginable for the past couple months. Typically, when I'm generating specs I tend to do something like this:
 

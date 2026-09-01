@@ -1,6 +1,7 @@
 ---
 title: "Agile Project Management"
 date: 2018-11-24T14:46:14-05:00
+tags: ["leadership"]
 ---
 
 To begin this post, I want to say that I am a fan of agile. I don’t think it is the perfect way to build software and I don’t think you can be as rigid as some of the original agile books suggestion. But I do think it is the most well defined software development lifecycle that we currently have. That being said, I tend to fall on Dave Thomas’ “[Agile is dead, Long live agility](https://pragdave.me/blog/2014/03/04/time-to-kill-agile.html).”

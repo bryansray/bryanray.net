@@ -2,6 +2,7 @@
 title: "Window Management With Moom"
 date: 2018-11-08T15:30:40-05:00
 draft: false
+tags: ["tools", "macos"]
 ---
 
 Moom is a window management tool that makes it easy to position and organize your applications. And while window management may seem like a very simple, if not, unnecessary tool in your toolbox … it has certainly been one of the staples to my workflow and productivity. 

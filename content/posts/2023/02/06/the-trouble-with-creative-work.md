@@ -1,6 +1,7 @@
 ---
 title: "The Trouble with Creative Work"
 date: 2023-02-06T10:00:00-05:00
+tags: ["writing"]
 ---
 
 The problem with creative work is that sometimes by the time people catch on to what’s valuable about what you do, you’re either a) bored to death with it, or b) dead. You can’t go looking for validation from external sources. Once you put your work into the world, you have no control over the way people will react to it.

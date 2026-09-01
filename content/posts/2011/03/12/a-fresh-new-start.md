@@ -1,6 +1,7 @@
 ---
 title: A fresh new start ...
 date: 2011-03-12T00:00:00-05:00
+tags: ["writing", "this-site"]
 ---
 I've been out of the writing scene for far too long now. Not only from technical writing, but also from personal writing and expression of my thoughts in general. I'm going to make a valid attempt to put a fresh set of paint on my personal site and to make a valid effort  to use my writing ability.
 

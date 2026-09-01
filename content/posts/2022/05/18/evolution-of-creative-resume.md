@@ -1,6 +1,7 @@
 ---
 title: "The Evolution of my Creative Resume"
 date: 2022-05-18T09:05:47-05:00
+tags: ["career"]
 ---
 
 My best friend, [Curtis Schlak](https://curtis.schlak.com), and I have been working together on-and-off for almost two decades now. He’s been an amazing mentor and friend as I’ve progressed through my career.

@@ -1,6 +1,7 @@
 ---
 title: A useful Terminal command ...
 date: 2010-11-17T19:18:20-05:00
+tags: ["tools", "macos"]
 ---
 This isn't going to be a very long post, but I just wanted to post about this useful command that I just learned about:
 

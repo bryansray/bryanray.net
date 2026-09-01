@@ -1,6 +1,7 @@
 ---
 title: Part 1 - Getting your first Merb app up and running
 date: 2008-08-29T19:18:20-05:00
+tags: ["ruby"]
 ---
 
 I know this may seem like the most basic of tasks, but there are not a lot of up-to-date articles on just starting out with Merb. So, over the next couple of months. I'm going to go through some of the latest Merb code and things you can do to get up and running with Merb.

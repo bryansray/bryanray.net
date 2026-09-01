@@ -1,6 +1,7 @@
 ---
 title: Don't take for granted the knowledge you acquire or the skills you hone.
 date: 2014-05-04T00:00:00-05:00
+tags: ["writing", "career"]
 ---
 
 > To be yourself in a world that is trying to make you something else is a great accomplishment. - _Ralph Waldo Emerson_

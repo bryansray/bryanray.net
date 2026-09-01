@@ -1,6 +1,7 @@
 ---
 title: American Idol contestants and their visions of grandeur.
 date: 2012-03-14T00:00:00-05:00
+tags: ["personal"]
 ---
 I’ve always been a fan of American Idol. Well, let me clarify that a bit; I’ve always been a fan of the American Idol auditions. Once they get down to the Top 24 or so I don’t really pay too much attention aside from just keeping up with it so that I know trivial pursuit pop culture questions.
 

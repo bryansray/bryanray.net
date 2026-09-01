@@ -1,6 +1,7 @@
 ---
 title: Identifying different types of personalities.
 date: 2014-05-08T00:00:00-05:00
+tags: ["writing", "leadership"]
 ---
 > Any change, even a change for the better, is always accompanied by drawbacks and discomforts.
 

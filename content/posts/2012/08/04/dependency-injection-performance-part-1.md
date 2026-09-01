@@ -1,6 +1,7 @@
 ---
 title: Dependency Injection Performance - Part 1
 date: 2012-08-04T00:00:00-05:00
+tags: ["architecture", "dotnet"]
 ---
 Let me begin this by stating that I’m not a huge statistical person by any stretch of the imagination. I'm not all that interested in crunching numbers and I really don’t have a knack for this sort of thing. The reason for this is that statistical analysis can almost always have a counter-argument; and I really dislike debating numbers. It's just not all that entertaining, in my opinion. Nonetheless, I do have a strong interest in dependency injection in general; which is why I decided to follow up on the topic …
 

@@ -1,7 +1,7 @@
 ---
 title: "Rebuilding My Personal Site: Hugo, Linode Object Storage, and Cloudflare"
 date: 2026-08-24T22:00:00-05:00
-tags: ["hugo", "linode", "cloudflare", "github-actions"]
+tags: ["this-site", "infrastructure"]
 ---
 
 My personal site has been around in one form or another for a long time. Like a lot of personal projects, it accumulated history: old design decisions, old content, and infrastructure that continued running mostly because it had always been there.

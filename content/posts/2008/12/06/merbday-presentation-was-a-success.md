@@ -1,6 +1,7 @@
 ---
 title: MerbDay presentation went well.
 date: 2008-12-06T19:18:20-05:00
+tags: ["speaking", "ruby"]
 ---
 Well, I made it through my first presentation and I have to admit it was a lot easier than I had imagined it. My nerves were probably on edge, because the last time I presented in front of an audience was back in college when I was trying to slink my way through a presentation about social reform during the great depression … yeah, it was brutal. But I've learned that presenting is pretty easy when you're actually knowledgeable and passionate about what you're speaking on. Perhaps if I have kids some day I'll relay that little tidbit on to them!
 

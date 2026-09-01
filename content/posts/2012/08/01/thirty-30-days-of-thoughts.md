@@ -1,6 +1,7 @@
 ---
 title: Thirty (30) days of thoughts.
 date: 2012-08-01T00:00:00-05:00
+tags: ["writing"]
 ---
 I recently watched a TED talk that described doing something for 30 days straight. I’ve been procrastinating it for the past few months on the basis of, “Well, I don’t have a calendar yet to mark my progress off … so I’ll wait until I get one.” Needless to say, my brain and I recognize that as procrastination at work.
 

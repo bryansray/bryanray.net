@@ -1,7 +1,7 @@
 ---
 title: "Politics, Religion & Lifestyle"
 date: 2020-09-24T22:36:40-05:00
-tags: ["politics"]
+tags: ["personal"]
 ---
 
 Just some random political thoughts that I had during this whole pandemic and drama filled 2020 ...

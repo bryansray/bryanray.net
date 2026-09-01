@@ -2,6 +2,7 @@
 title: "Interviewing Software Developers in 2019"
 date: 2019-07-14T13:16:06-05:00
 draft: false
+tags: ["career", "leadership"]
 ---
 
 I’ve been through quite a few developer interviews in my career. Some were great, some … not so great. I still remember one in particular, back when I was a young junior developer. I went in to an interview and was absolutely grilled by a couple developers in a conference room. I can still remember to this day walking out of that building feeling so embarrassed. My tail tucked firmly between my legs and a strong disdain for the company and almost my entire profession.

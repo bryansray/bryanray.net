@@ -2,6 +2,7 @@
 title: "Crystal Lang Exploration"
 date: 2018-08-01T21:59:57-05:00
 draft: false
+tags: ["crystal"]
 ---
 
 Crystal is a general-purpose, object-oriented programming language. The language is statically type-checked but does not require that the type of variables or method arguments be specified.

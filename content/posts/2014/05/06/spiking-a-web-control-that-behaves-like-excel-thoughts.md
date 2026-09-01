@@ -1,6 +1,7 @@
 ---
 title: Spiking a web control that behaves like Excel. Thoughts?
 date: 2014-05-06T00:00:00-05:00
+tags: ["writing"]
 ---
 > If your actions inspire other to dream more, learn more, do more, or become more, you are a leader.
 

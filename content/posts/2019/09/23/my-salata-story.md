@@ -1,6 +1,7 @@
 ---
 title: "My Salata Story"
 date: 2019-09-23T21:28:24-05:00
+tags: ["personal"]
 ---
 
 This is a bit of a long story, but one that I felt compelled to share, because it was an important part of my day.

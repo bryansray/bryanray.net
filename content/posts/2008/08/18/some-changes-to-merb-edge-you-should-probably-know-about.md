@@ -1,6 +1,7 @@
 ---
 title: Some Changes to Merb Edge You Should Probably Know About
 date: 2008-08-18T19:18:20-05:00
+tags: ["ruby"]
 ---
 While doing a fresh pull of "Merb":http://merbivore.com edge this weekend I realized that all of my forms had suddenly just disappeared and I was also receiving some NoMethod errors; which is never a fun scenario. Just in case you like to develop on edge (and who doesn't when it comes to Merb?) you should probably be aware of a few changes that went through this week.
 

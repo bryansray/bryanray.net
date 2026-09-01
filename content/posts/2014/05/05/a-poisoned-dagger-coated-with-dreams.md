@@ -1,6 +1,7 @@
 ---
 title: A poisoned dagger coated with dreams ...
 date: 2014-05-05T00:00:00-05:00
+tags: ["writing"]
 ---
 
 > You have to learn the rules of the game. And then you have to play better than anyone else. - Albert Einstein

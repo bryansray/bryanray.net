@@ -1,6 +1,7 @@
 ---
 title: Too tired to be able to think of anything worthwhile.
 date: 2014-05-02T00:00:00-05:00
+tags: ["writing"]
 ---
 
 **Day 2 of 31**: I've literally been sitting at the computer for the past 30 to 45 minutes debating what to write about. I've been awake since 4:30 AM and, unfortunately, I just can't come up with anything relevant to write.
