@@ -111,7 +111,7 @@ The workflow:
 
 The deployment credentials live in GitHub Actions secrets, not in the repository. The Linode key is limited to the site bucket. The Cloudflare token is limited to reading the `bryanray.net` zone and purging its cache.
 
-I also automated certificate renewal for the Object Storage bucket. A separate scheduled workflow uses a DNS challenge to issue a Let's Encrypt certificate and replace the certificate stored by Linode. Even though Cloudflare serves the public traffic, keeping the origin certificate maintained avoids leaving an undocumented manual renewal task for my future self.
+Cloudflare manages the public TLS certificate at the edge. Because the Worker fetches Linode's HTTP website endpoint, a custom certificate stored on the bucket is not part of the production request path and does not require a separate renewal workflow.
 
 ## The successful deployment that looked unsuccessful
 

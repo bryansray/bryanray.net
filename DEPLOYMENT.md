@@ -127,14 +127,10 @@ these two Cloudflare nameservers. The staged Cloudflare zone contains the five
 Google Workspace MX records, SPF and ACME TXT records, the proxied apex and
 `www` records, and DNS-only `equipmac` and `pve` A records.
 
-Certificate renewal is not automatic merely because the certificate is stored
-on the bucket. The `Renew Object Storage TLS certificate` GitHub Actions
-workflow issues a fresh Let's Encrypt certificate with a Linode DNS-01
-challenge on the first day of each month, validates it, then replaces the
-certificate on this bucket. It
-uses the repository secret `LINODE_TLS_TOKEN`, whose Linode API token is limited
-to `domains:read_write` and `object_storage:read_write` scopes and expires on
-August 20, 2027. Rotate the token and update the secret before that date.
+Cloudflare terminates public TLS with its managed edge certificate. The Worker
+fetches the bucket's HTTP website endpoint, so a custom TLS certificate stored
+on the bucket is not part of the production request path and does not need a
+renewal workflow.
 
 ## Rollback
 
