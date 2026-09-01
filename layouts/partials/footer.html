@@ -1,4 +1,4 @@
 <footer class="site-footer">
-  <div class="shell footer-grid"><div><span class="wordmark-mark">BR</span><p>Building things and sharing the journey.</p></div><div class="footer-links"><a href="https://github.com/bryansray" rel="me">GitHub</a><a href="https://linkedin.com/in/bryanray" rel="me">LinkedIn</a><a href="mailto:bryan@bryanray.net">Email</a></div></div>
+  <div class="shell footer-grid"><div><span class="wordmark-mark">BR</span><p>Building things and sharing the journey.</p></div><div class="footer-links"><a href="{{ "videos/" | relURL }}">Videos</a><a href="https://github.com/bryansray" rel="me">GitHub</a><a href="https://linkedin.com/in/bryanray" rel="me">LinkedIn</a><a href="https://www.youtube.com/channel/UCXqDkMvxMIccERjvVLZnaAw" rel="me">YouTube</a><a href="mailto:bryan@bryanray.net">Email</a>{{ with .Site.Home.OutputFormats.Get "rss" }}<a href="{{ .Permalink }}">RSS</a>{{ end }}</div></div>
   <div class="shell footer-bottom"><span>© {{ now.Year }} Bryan Ray</span><span>Made with Hugo and curiosity.</span></div>
 </footer>
