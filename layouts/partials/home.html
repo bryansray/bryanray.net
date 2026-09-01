@@ -3,5 +3,12 @@
   <div class="hero-portrait"><div class="portrait-frame"><img src="{{ .Site.Params.avatarurl | relURL }}" alt="Bryan Ray" width="520" height="520"></div><div class="availability"><span></span> Always making something</div></div>
 </section>
 <section class="home-section shell"><div class="section-heading"><div><p class="eyebrow">From the notebook</p><h2>Latest notes</h2></div><a class="text-link" href="{{ "posts/" | relURL }}">Browse the notebook →</a></div><div class="post-grid">{{ range first 3 (where .Site.RegularPages "Section" "posts") }}{{ partial "post-card.html" . }}{{ end }}</div></section>
-<section class="work-band"><div class="shell home-section"><div class="section-heading"><div><p class="eyebrow">What I’m making</p><h2>Things I’ve built</h2></div><p class="section-intro">Apps, open-source code, personal projects, and experiments—some practical, some playful, and all made out of curiosity.</p></div><div class="work-grid">{{ range first 2 hugo.Data.apps }}{{ partial "work-card.html" (dict "item" . "kind" "App") }}{{ end }}{{ range first 1 hugo.Data.projects }}{{ partial "work-card.html" (dict "item" . "kind" "Project") }}{{ end }}</div></div></section>
+{{ $work := slice }}
+{{ range hugo.Data.apps }}
+  {{ $work = $work | append (dict "item" . "kind" "App") }}
+{{ end }}
+{{ range hugo.Data.projects }}
+  {{ $work = $work | append (dict "item" . "kind" "Project") }}
+{{ end }}
+<section class="work-band"><div class="shell home-section"><div class="section-heading"><div><p class="eyebrow">What I’m making</p><h2>Things I’ve built</h2></div><p class="section-intro">Apps, open-source code, personal projects, and experiments—some practical, some playful, and all made out of curiosity.</p></div><div class="work-grid">{{ range first 9 $work }}{{ partial "work-card.html" . }}{{ end }}</div></div></section>
 <section class="callout shell"><p class="eyebrow">A work in progress</p><h2>There’s always something worth making—or writing down.</h2><p>This site is where I share what I’m building, what I’m learning, and the occasional moment I want to remember.</p><a class="button button-primary" href="{{ "posts/" | relURL }}">Explore the notebook</a></section>
