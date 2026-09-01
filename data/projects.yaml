@@ -1,3 +1,9 @@
+- title: "daymark"
+  description: "A local-first macOS CLI for reading and searching Apple Calendar data from the terminal."
+  url: "https://github.com/bryansray/daymark"
+  icon: "▣"
+  tags: ["Swift", "macOS", "CLI"]
+
 - title: "bryanray.net"
   description: "The source for this site: a fast, accessible publishing system built with Hugo."
   url: "https://github.com/bryansray/bryanray.net"
