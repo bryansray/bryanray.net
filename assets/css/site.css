@@ -103,6 +103,13 @@ h1,h2,h3 { margin:0; font-weight:800; line-height:1.08; letter-spacing:-.045em; 
 .post-list .post { padding-right:80px; }
 .post-list .post h3 { font-size:30px; }
 .post-list .post-arrow { opacity:1; }
+.archive-year { margin-bottom:50px; max-width:900px; }
+.archive-year h2 { padding-bottom:12px; border-bottom:1px solid var(--line); font-size:15px; letter-spacing:.14em; color:var(--muted); }
+.archive-year ul { margin:0; padding:0; list-style:none; }
+.archive-year li { display:flex; gap:20px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--line); }
+.archive-year time { flex:none; width:64px; color:var(--muted); font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; }
+.archive-year a { font-size:18px; font-weight:700; text-decoration:none; }
+.archive-year a:hover { color:var(--accent); }
 .article { max-width:900px; padding-block:70px 110px; }
 .article-header { margin-bottom:55px; }
 .article-header .back-link { display:inline-block; margin-bottom:55px; color:var(--muted); font-size:13px; font-weight:700; text-decoration:none; }
