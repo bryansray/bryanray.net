@@ -14,3 +14,24 @@ document.addEventListener('keydown', (event) => {
 });
 // The theme itself is applied by the inline script in baseof.html; this only flips it.
 themeButton?.addEventListener('click', () => { const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; document.documentElement.dataset.theme = theme; try { localStorage.setItem('theme', theme); } catch (e) {} });
+
+// Copy buttons for code blocks. The button lives in a wrapper rather than inside the
+// <pre>, so it stays put when a long line scrolls and never lands in the copied text.
+document.querySelectorAll('.article-body pre').forEach((pre) => {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'code-block';
+  pre.parentNode.insertBefore(wrapper, pre);
+  wrapper.appendChild(pre);
+
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'copy-button';
+  button.textContent = 'Copy';
+  button.addEventListener('click', () => {
+    navigator.clipboard.writeText(pre.innerText).then(
+      () => { button.textContent = 'Copied'; },
+      () => { button.textContent = 'Press ⌘C'; }
+    ).finally(() => setTimeout(() => { button.textContent = 'Copy'; }, 2000));
+  });
+  wrapper.appendChild(button);
+});

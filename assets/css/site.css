@@ -126,6 +126,10 @@ h1,h2,h3 { margin:0; font-weight:800; line-height:1.08; letter-spacing:-.045em; 
 .article-body h3 { font-size:26px; }
 .article-body img { margin:35px auto; border-radius:6px; }
 .article-body pre { overflow-x:auto; padding:22px; border-radius:7px; font-size:14px; }
+.code-block { position:relative; }
+.copy-button { position:absolute; top:12px; right:12px; padding:6px 11px; background:var(--surface); color:var(--muted); border:1px solid var(--line); border-radius:6px; font-family:Muli,sans-serif; font-size:11px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; cursor:pointer; opacity:0; transition:.2s ease; }
+.code-block:hover .copy-button,.copy-button:focus-visible { opacity:1; }
+.copy-button:hover { color:var(--ink); border-color:var(--accent); }
 .article-body code { font-size:.88em; }
 .article-body blockquote { margin:35px 0; padding:3px 0 3px 25px; border-left:3px solid var(--accent); color:var(--muted); font-style:italic; }
 .article-body table { display:block; max-width:100%; overflow:auto; border-collapse:collapse; font-family:Muli,sans-serif; font-size:14px; }
