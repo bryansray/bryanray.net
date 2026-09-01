@@ -51,6 +51,7 @@ h1,h2,h3 { margin:0; font-weight:800; line-height:1.08; letter-spacing:-.045em; 
 .button-secondary { border:1px solid var(--line); background:var(--surface); }
 .portrait-frame { position:relative; padding:15px; border:1px solid var(--line); border-radius:48% 52% 45% 55% / 55% 42% 58% 45%; transform:rotate(2deg); }
 .portrait-frame:before { content:""; position:absolute; inset:-16px 30px 30px -16px; z-index:-1; border-radius:inherit; background:var(--soft-blue); transform:rotate(-6deg); }
+.portrait-frame picture { display:block; border-radius:inherit; }
 .portrait-frame img { aspect-ratio:1; object-fit:cover; border-radius:inherit; filter:saturate(.75); }
 .availability { display:flex; align-items:center; justify-content:center; gap:9px; width:max-content; margin:20px auto 0; color:var(--muted); font-size:12px; font-weight:700; }
 .availability span { width:8px; height:8px; border-radius:50%; background:#48a872; box-shadow:0 0 0 5px rgba(72,168,114,.16); }

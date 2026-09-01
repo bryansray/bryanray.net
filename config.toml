@@ -23,7 +23,7 @@ author = "Bryan Ray"
 info = "Code, Projects & Life"
 description = "A developer's notebook about software, personal projects, and the moments in between."
 keywords = "blog,developer,software,projects,personal"
-avatarurl = "images/bryanray-headshot.jpeg"
+avatar = "images/bryanray-headshot.jpeg"
 
 footercontent = "Built with ♥️"
 
