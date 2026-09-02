@@ -41,14 +41,19 @@ which has aged about as well as you would expect.
 - **[C#](https://learn.microsoft.com/dotnet/csharp/) / .NET 10** — the ecosystem I have spent the most career time in.
 - **[Python](https://www.python.org/) 3.13**, managed with **pyenv**, with **uv** for environments and installs.
 - **[Ruby](https://www.ruby-lang.org/)** via **rbenv**. The oldest posts on this site are Merb and rSpec, so it goes back a while.
-- **[Swift](https://www.swift.org/)** for small macOS tools.
+- **[Swift](https://www.swift.org/)** and **SwiftUI**, for macOS command-line tools and iOS apps — [daymark](https://github.com/bryansray/daymark) is the former, [Plate Bingo](/plate-bingo/) the latter.
 
 ## Frameworks and libraries
 
 - **[React](https://react.dev/)** for the majority of front-end work.
 - **[SolidJS](https://www.solidjs.com/)** and **SolidStart** — what [Neighborly](https://neighborly.bryanray.net/) is built on.
 - **[ASP.NET Core](https://learn.microsoft.com/aspnet/core/)** and **Entity Framework Core** on the .NET side. <!-- confirm: I inferred these from .NET being installed -->
-- **[PostgreSQL](https://www.postgresql.org/)** and **SQLite** for storage, with **Docker** when something needs isolating.
+
+## Databases
+
+- **[PostgreSQL](https://www.postgresql.org/)** — the default for anything that needs a real database.
+- **[MongoDB](https://www.mongodb.com/)**, driven from **mongosh** and **Compass**.
+- **[SQLite](https://www.sqlite.org/)** for anything local, embedded, or single-file.
 
 ## AI tools
 
@@ -61,6 +66,7 @@ which has aged about as well as you would expect.
 - **[just](https://github.com/casey/just)** as a task runner. Every project I keep ends up with a justfile.
 - **[ripgrep](https://github.com/BurntSushi/ripgrep)** and **[fzf](https://github.com/junegunn/fzf)**, constantly.
 - **[Moom](https://manytricks.com/moom/)** for window management — [still worth the money](/2018/11/window-management-with-moom/).
+- **[Docker](https://www.docker.com/)** when something needs isolating.
 - **[1Password](https://1password.com/)** for credentials.
 
 ## This site
