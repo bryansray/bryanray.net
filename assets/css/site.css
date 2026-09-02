@@ -142,6 +142,7 @@ h1,h2,h3 { margin:0; font-weight:800; line-height:1.08; letter-spacing:-.045em; 
 .article-nav small { color:var(--muted); text-transform:uppercase; }
 .shelf-group + .shelf-group { margin-top:60px; }
 .shelf-group > h2 { margin-bottom:20px; color:var(--muted); font-size:14px; letter-spacing:.14em; text-transform:uppercase; }
+.shelf-group--now > h2 { color:var(--accent); }
 .shelf { max-width:900px; margin:0; padding:0; list-style:none; }
 .shelf-item { display:grid; grid-template-columns:120px 1fr; gap:34px; padding:34px 0; border-bottom:1px solid var(--line); }
 .shelf-item:first-child { border-top:1px solid var(--line); }

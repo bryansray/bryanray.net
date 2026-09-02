@@ -1,0 +1,29 @@
+{{- /* One shelf row. Shared by the "Reading now" section and the shelf groups so
+       the two cannot drift apart. */ -}}
+{{- $url := .url -}}
+{{- $cover := "" -}}
+{{- with .image_path }}{{ $cover = resources.Get (strings.TrimPrefix "/" .) }}{{ end }}
+<li class="shelf-item">
+  {{- with $cover }}
+  {{- $x1 := .Process "fill 120x180 center webp q80" -}}
+  {{- $x2 := .Process "fill 240x360 center webp q72" }}
+  {{- /* Decorative: the title link beside it already carries the accessible name. */}}
+  <a class="shelf-cover" href="{{ $url }}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="{{ $x1.RelPermalink }}" srcset="{{ $x1.RelPermalink }} 1x, {{ $x2.RelPermalink }} 2x" alt="" width="120" height="180" loading="lazy" decoding="async"></a>
+  {{- else }}
+  {{- /* No cover art yet: a placeholder keeps the row rhythm rather than
+         collapsing the entry to full width beside its neighbours. */}}
+  <span class="shelf-cover shelf-cover--placeholder" aria-hidden="true">{{ substr .title 0 1 }}</span>
+  {{- end }}
+  <div class="shelf-body">
+    <h3><a href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ .title }}</a>{{ with .series }} <span class="shelf-count">{{ len . }} books</span>{{ end }}</h3>
+    {{- /* No chip for "reading": those sit under the Reading now heading, which
+           already says it. "next" stays in its shelf, so it still needs one. */}}
+    <p class="shelf-meta">{{ .author }}{{ with .published }} · {{ . }}{{ end }}{{ if eq .status "next" }} · <span class="shelf-status">Up next</span>{{ end }}</p>
+    {{- with .note }}<p class="shelf-note">{{ . }}</p>{{ end }}
+    {{- with .series }}
+    <ol class="shelf-volumes">
+      {{- range . }}<li><b>{{ .number }}</b> {{ .title }} <span>{{ .published }}</span></li>{{ end }}
+    </ol>
+    {{- end }}
+  </div>
+</li>
