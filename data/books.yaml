@@ -114,6 +114,7 @@
   shelf: fiction
   status: read
   url: "https://www.amazon.com/Dungeon-Crawler-Carl/dp/B08BX5D4LC"
+  image_path: "/images/books/dungeon-crawler-carl.jpg"
   note: >-
     Earth is demolished to make way for a planetary dungeon crawl, broadcast as
     entertainment to the rest of the galaxy, and the surviving heroes are a man in
@@ -152,6 +153,7 @@
   status: read
   published: 2021
   url: "https://www.amazon.com/Project-Hail-Mary-Andy-Weir/dp/059335527X"
+  image_path: "/images/books/project-hail-mary.jpg"
   note: >-
     A lone astronaut wakes with amnesia on a ship he does not remember boarding and
     has to reason his way out from first principles. The problem-solving is the draw,
@@ -163,6 +165,7 @@
   status: reading
   published: 2014
   url: "https://www.amazon.com/Red-Rising-Pierce-Brown/dp/034553980X"
+  image_path: "/images/books/red-rising.jpg"
   note: >-
     A miner on Mars finds out his caste has been lied to for generations, and is
     remade to infiltrate the ruling class from the inside. First of a long series, so
