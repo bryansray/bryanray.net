@@ -140,11 +140,17 @@ h1,h2,h3 { margin:0; font-weight:800; line-height:1.08; letter-spacing:-.045em; 
 .article-nav a { display:flex; flex-direction:column; text-decoration:none; }
 .article-nav .next { text-align:right; }
 .article-nav small { color:var(--muted); text-transform:uppercase; }
-.books { display:grid; grid-template-columns:repeat(4,1fr); gap:28px; max-width:1180px; margin:0 auto; padding:55px 24px 110px; list-style:none; }
-.book { text-align:center; }
-.book a { display:block; text-decoration:none; }
-.book img { width:160px; height:240px; object-fit:cover; margin:0 auto 14px; border-radius:5px; box-shadow:var(--shadow); }
-.book .title { display:block; font-size:14px; font-weight:700; }
+.shelf-group + .shelf-group { margin-top:60px; }
+.shelf-group > h2 { margin-bottom:20px; color:var(--muted); font-size:14px; letter-spacing:.14em; text-transform:uppercase; }
+.shelf { max-width:900px; margin:0; padding:0; list-style:none; }
+.shelf-item { display:grid; grid-template-columns:120px 1fr; gap:34px; padding:34px 0; border-bottom:1px solid var(--line); }
+.shelf-item:first-child { border-top:1px solid var(--line); }
+.shelf-cover img { width:120px; height:180px; border-radius:5px; box-shadow:var(--shadow); }
+.shelf-body h3 { font-size:23px; line-height:1.3; letter-spacing:-.02em; }
+.shelf-body h3 a { text-decoration:none; }
+.shelf-body h3 a:hover { color:var(--accent); }
+.shelf-meta { margin:9px 0 0; color:var(--muted); font-size:12px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; }
+.shelf-note { margin:15px 0 0; max-width:62ch; color:var(--muted); font-size:15px; line-height:1.7; }
 
 .site-footer { padding-top:65px; background:var(--ink); color:var(--paper); }
 [data-theme="dark"] .site-footer { background:#0b100e; color:#f7f3eb; }
@@ -173,7 +179,8 @@ h1,h2,h3 { margin:0; font-weight:800; line-height:1.08; letter-spacing:-.045em; 
   .post-grid .post:not(:last-child) { margin-right:0; border-right:0; }
   .section-heading { align-items:start; flex-direction:column; }
   .work-card { min-height:320px; }
-  .books { grid-template-columns:repeat(2,1fr); }
+  .shelf-item { grid-template-columns:96px 1fr; gap:22px; }
+  .shelf-cover img { width:96px; height:144px; }
 }
 @media (max-width:520px) {
   body { font-size:16px; }
