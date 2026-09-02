@@ -33,7 +33,7 @@ which has aged about as well as you would expect.
 - **[Visual Studio Code](https://code.visualstudio.com/)** — my main editor across every language below.
 - **[iTerm2](https://iterm2.com/)** with **zsh**, where most of the actual work happens.
 - **[Xcode](https://developer.apple.com/xcode/)**, for the Swift side of things — it is what [daymark](https://github.com/bryansray/daymark) is built in.
-- **[Raycast](https://raycast.com/)** for launching and switching, and **[Obsidian](https://obsidian.md/)** for notes.
+- **[Obsidian](https://obsidian.md/)** for notes.
 
 ## Languages and runtimes
 
@@ -66,6 +66,12 @@ which has aged about as well as you would expect.
 - **[just](https://github.com/casey/just)** as a task runner. Every project I keep ends up with a justfile.
 - **[ripgrep](https://github.com/BurntSushi/ripgrep)** and **[fzf](https://github.com/junegunn/fzf)**, constantly.
 - **[Moom](https://manytricks.com/moom/)** for window management — [still worth the money](/2018/11/window-management-with-moom/).
+- **[Raycast](https://raycast.com/)** for launching, switching, and everything I have stopped keeping in the Dock.
+- **[Keyboard Maestro](https://www.keyboardmaestro.com/)** and **[Karabiner-Elements](https://karabiner-elements.pqrs.org/)** for macros and keyboard remapping.
+- **[CleanShot X](https://cleanshot.com/)** for screenshots and screen recordings.
+- **[ForkLift](https://binarynights.com/)** as a file manager, and **[Hazel](https://www.noodlesoft.com/)** to keep folders tidy without thinking about it.
+- **[Kaleidoscope](https://kaleidoscope.app/)** for diffs and merges.
+- **[Barbee](https://macbarbee.com/)** to keep the menu bar under control.
 - **[Docker](https://www.docker.com/)** when something needs isolating.
 - **[1Password](https://1password.com/)** for credentials.
 
