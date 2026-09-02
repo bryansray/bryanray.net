@@ -1,34 +1,35 @@
 {{ define "main" }}
-{{- $reading := slice }}{{ $next := slice }}{{ $read := slice -}}
-{{- range hugo.Data.books -}}
-  {{- $status := .status | default "" -}}
-  {{- if eq $status "reading" }}{{ $reading = $reading | append . }}
-  {{- else if eq $status "next" }}{{ $next = $next | append . }}
-  {{- else }}{{ $read = $read | append . }}{{ end -}}
-{{- end -}}
-{{- $grouped := or $reading $next -}}
+{{- $shelves := slice (dict "key" "work" "label" "Work & teams") (dict "key" "fiction" "label" "Fiction") -}}
+{{- $books := hugo.Data.books -}}
 
-<header class="page-header shell"><p class="eyebrow">What I’m reading</p><h1>Bookshelf</h1><p>Books that have shaped how I think about software, teams, and the work of building things with other people.</p></header>
+<header class="page-header shell"><p class="eyebrow">What I’m reading</p><h1>Bookshelf</h1><p>Mostly books about software, teams, and the work of building things with other people — plus whatever fiction currently has hold of me.</p></header>
 <section class="collection shell">
-{{- range $group := slice (dict "label" "Reading now" "items" $reading) (dict "label" "Up next" "items" $next) (dict "label" "Read" "items" $read) }}
-  {{- with $group.items }}
+{{- range $shelf := $shelves }}
+  {{- $items := where $books "shelf" $shelf.key }}
+  {{- with $items }}
   <section class="shelf-group">
-    {{ if $grouped }}<h2>{{ $group.label }}</h2>{{ end }}
+    <h2>{{ $shelf.label }}</h2>
     <ul class="shelf">
       {{- range . }}
       {{- $url := .url -}}
-      {{- $cover := resources.Get (strings.TrimPrefix "/" .image_path) }}
-      <li class="shelf-item">
+      {{- $cover := "" -}}
+      {{- with .image_path }}{{ $cover = resources.Get (strings.TrimPrefix "/" .) }}{{ end }}
+      <li class="shelf-item{{ if not $cover }} shelf-item--nocover{{ end }}">
         {{- with $cover }}
         {{- $x1 := .Process "fill 120x180 center webp q80" -}}
         {{- $x2 := .Process "fill 240x360 center webp q72" }}
-        {{- /* Decorative: the title link right beside it carries the accessible name. */}}
+        {{- /* Decorative: the title link beside it already carries the accessible name. */}}
         <a class="shelf-cover" href="{{ $url }}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="{{ $x1.RelPermalink }}" srcset="{{ $x1.RelPermalink }} 1x, {{ $x2.RelPermalink }} 2x" alt="" width="120" height="180" loading="lazy" decoding="async"></a>
         {{- end }}
         <div class="shelf-body">
-          <h3><a href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ .title }}</a></h3>
-          <p class="shelf-meta">{{ .author }}{{ with .published }} · {{ . }}{{ end }}</p>
+          <h3><a href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ .title }}</a>{{ with .series }} <span class="shelf-count">{{ len . }} books</span>{{ end }}</h3>
+          <p class="shelf-meta">{{ .author }}{{ with .published }} · {{ . }}{{ end }}{{ if ne .status "read" }} · <span class="shelf-status">{{ if eq .status "reading" }}Reading now{{ else }}Up next{{ end }}</span>{{ end }}</p>
           {{- with .note }}<p class="shelf-note">{{ . }}</p>{{ end }}
+          {{- with .series }}
+          <ol class="shelf-volumes">
+            {{- range . }}<li><b>{{ .number }}</b> {{ .title }} <span>{{ .published }}</span></li>{{ end }}
+          </ol>
+          {{- end }}
         </div>
       </li>
       {{- end }}

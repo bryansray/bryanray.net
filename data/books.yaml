@@ -1,12 +1,16 @@
 # Books worth keeping on the shelf.
 #
-# status is optional: "reading" or "next" pulls a book into its own group at the
-# top of the page. Leave it off and the book sits under "Read".
-#
+# shelf groups the page: "work" or "fiction".
+# status is "read", "reading" or "next"; anything not "read" gets a chip.
 # note is the point of this file — a wall of covers says nothing on its own.
+#
+# series turns one entry into a whole run of books, so an eight-volume series is
+# a single annotated entry rather than eight near-identical rows.
 
 - title: "Peopleware: Productive Projects and Teams"
   author: "Tom DeMarco & Timothy Lister"
+  shelf: work
+  status: read
   published: 1987
   url: "https://www.amazon.com/Peopleware-Productive-Projects-and-Teams/dp/B09WDSRT9C"
   image_path: "/images/books/peopleware.jpeg"
@@ -17,6 +21,8 @@
 
 - title: "How to Win Friends & Influence People"
   author: "Dale Carnegie"
+  shelf: work
+  status: read
   published: 1936
   url: "https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034"
   image_path: "/images/books/how-to-win-friends-and-influence-people.jpg"
@@ -26,6 +32,8 @@
 
 - title: "Quiet: The Power of Introverts in a World That Can't Stop Talking"
   author: "Susan Cain"
+  shelf: work
+  status: read
   published: 2012
   url: "https://www.amazon.com/Quiet-Power-Introverts-World-Talking/dp/0307352153"
   image_path: "/images/books/quiet.jpg"
@@ -35,6 +43,8 @@
 
 - title: "Give & Take: Why Helping Others Drives Our Success"
   author: "Adam Grant"
+  shelf: work
+  status: read
   published: 2013
   url: "https://www.amazon.com/Give-Take-Helping-Others-Success/dp/0143124986"
   image_path: "/images/books/give-and-take.jpg"
@@ -45,6 +55,8 @@
 
 - title: "Start With Why: How Great Leaders Inspire Everyone to Take Action"
   author: "Simon Sinek"
+  shelf: work
+  status: read
   published: 2009
   url: "https://www.amazon.com/Start-Why-Leaders-Inspire-Everyone/dp/1591846447"
   image_path: "/images/books/start-with-why.jpg"
@@ -54,6 +66,8 @@
 
 - title: "Principles: Life and Work"
   author: "Ray Dalio"
+  shelf: work
+  status: read
   published: 2017
   url: "https://www.amazon.com/Principles-Life-Work-Ray-Dalio/dp/1501124021"
   image_path: "/images/books/principles.jpg"
@@ -64,6 +78,8 @@
 
 - title: "Rework"
   author: "Jason Fried & David Heinemeier Hansson"
+  shelf: work
+  status: read
   published: 2010
   url: "https://www.amazon.com/Rework-Jason-Fried/dp/0307463745"
   image_path: "/images/books/rework.jpg"
@@ -73,6 +89,8 @@
 
 - title: "Remote: Office Not Required"
   author: "Jason Fried & David Heinemeier Hansson"
+  shelf: work
+  status: read
   published: 2013
   url: "https://www.amazon.com/Remote-Office-Required-Jason-Fried/dp/0804137501"
   image_path: "/images/books/remote.jpg"
@@ -82,9 +100,48 @@
 
 - title: "It Doesn't Have to Be Crazy at Work"
   author: "Jason Fried & David Heinemeier Hansson"
+  shelf: work
+  status: read
   published: 2018
   url: "https://www.amazon.com/Doesnt-Have-Be-Crazy-Work/dp/B07G8L5NZ9"
   image_path: "/images/books/crazy-at-work.jpg"
   note: >-
     The argument that the permanent crisis most companies live in is self-inflicted.
     Blunt, short chapters that are easy to disagree with productively.
+
+- title: "Dungeon Crawler Carl"
+  author: "Matt Dinniman"
+  shelf: fiction
+  status: read
+  url: "https://www.amazon.com/Dungeon-Crawler-Carl/dp/B08BX5D4LC"
+  note: >-
+    Earth is demolished to make way for a planetary dungeon crawl, broadcast as
+    entertainment to the rest of the galaxy, and the surviving heroes are a man in
+    his boxers and his ex-girlfriend's show cat. It is far funnier and far more
+    genuinely upsetting than that premise suggests, and it keeps escalating for eight
+    books without losing the thread. My favourite reading of the year.
+  series:
+    - number: 1
+      title: "Dungeon Crawler Carl"
+      published: 2020
+    - number: 2
+      title: "Carl's Doomsday Scenario"
+      published: 2021
+    - number: 3
+      title: "The Dungeon Anarchist's Cookbook"
+      published: 2021
+    - number: 4
+      title: "The Gate of the Feral Gods"
+      published: 2021
+    - number: 5
+      title: "The Butcher's Masquerade"
+      published: 2022
+    - number: 6
+      title: "The Eye of the Bedlam Bride"
+      published: 2023
+    - number: 7
+      title: "This Inevitable Ruin"
+      published: 2024
+    - number: 8
+      title: "A Parade of Horribles"
+      published: 2026

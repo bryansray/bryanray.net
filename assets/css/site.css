@@ -151,6 +151,13 @@ h1,h2,h3 { margin:0; font-weight:800; line-height:1.08; letter-spacing:-.045em; 
 .shelf-body h3 a:hover { color:var(--accent); }
 .shelf-meta { margin:9px 0 0; color:var(--muted); font-size:12px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; }
 .shelf-note { margin:15px 0 0; max-width:62ch; color:var(--muted); font-size:15px; line-height:1.7; }
+.shelf-item--nocover { grid-template-columns:1fr; }
+.shelf-count { display:inline-block; padding:3px 9px; margin-left:6px; border-radius:999px; background:var(--soft-blue); color:var(--blue); font-size:11px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; vertical-align:middle; }
+.shelf-status { color:var(--accent); }
+.shelf-volumes { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:2px 28px; margin:18px 0 0; padding:0; list-style:none; }
+.shelf-volumes li { display:flex; gap:10px; align-items:baseline; padding:6px 0; border-bottom:1px solid var(--line); font-size:14px; }
+.shelf-volumes b { flex:none; width:18px; color:var(--accent); font-size:12px; }
+.shelf-volumes span { margin-left:auto; padding-left:10px; color:var(--muted); font-size:12px; font-weight:700; }
 
 .site-footer { padding-top:65px; background:var(--ink); color:var(--paper); }
 [data-theme="dark"] .site-footer { background:#0b100e; color:#f7f3eb; }
@@ -180,6 +187,7 @@ h1,h2,h3 { margin:0; font-weight:800; line-height:1.08; letter-spacing:-.045em; 
   .section-heading { align-items:start; flex-direction:column; }
   .work-card { min-height:320px; }
   .shelf-item { grid-template-columns:96px 1fr; gap:22px; }
+  .shelf-volumes { grid-template-columns:1fr; }
   .shelf-cover img { width:96px; height:144px; }
 }
 @media (max-width:520px) {
