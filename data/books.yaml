@@ -1,27 +1,90 @@
-- title: "Give & Take"
-  url: "https://www.amazon.com/Give-Take-Helping-Others-Success/dp/0143124986"
-  image_path: "/images/books/give-and-take.jpg"
-- title: "Principles: Life and Work"
-  url: "https://www.amazon.com/Principles-Life-Work-Ray-Dalio/dp/1501124021"
-  image_path: "/images/books/principles.jpg"
-- title: "Quiet: The Power of Introverts in a World That Can't Stop Talking"
-  url: "https://www.amazon.com/Quiet-Power-Introverts-World-Talking/dp/0307352153"
-  image_path: "/images/books/quiet.jpg"
+# Books worth keeping on the shelf.
+#
+# status is optional: "reading" or "next" pulls a book into its own group at the
+# top of the page. Leave it off and the book sits under "Read".
+#
+# note is the point of this file — a wall of covers says nothing on its own.
+
 - title: "Peopleware: Productive Projects and Teams"
+  author: "Tom DeMarco & Timothy Lister"
+  published: 1987
   url: "https://www.amazon.com/Peopleware-Productive-Projects-and-Teams/dp/B09WDSRT9C"
   image_path: "/images/books/peopleware.jpeg"
-- title: "Start With Why"
-  url: "https://www.amazon.com/Start-Why-Leaders-Inspire-Everyone/dp/1591846447"
-  image_path: "/images/books/start-with-why.jpg"
+  note: >-
+    From 1987 and still the most accurate book about software work I know of: the
+    major problems are human, not technical. The chapters on interruption and office
+    noise have aged frighteningly well.
+
 - title: "How to Win Friends & Influence People"
+  author: "Dale Carnegie"
+  published: 1936
   url: "https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034"
   image_path: "/images/books/how-to-win-friends-and-influence-people.jpg"
-- title: "It Doesn't Have to Be Crazy at Work"
-  url: "https://www.amazon.com/Doesnt-Have-Be-Crazy-Work/dp/B07G8L5NZ9"
-  image_path: "/images/books/crazy-at-work.jpg"
-- title: "Remote: Office Not Required"
-  url: "https://www.amazon.com/Remote-Office-Required-Jason-Fried/dp/0804137501"
-  image_path: "/images/books/remote.jpg"
+  note: >-
+    Almost a century old and still the clearest thing written about paying attention
+    to other people. Easy to dismiss on the title alone, which is a mistake.
+
+- title: "Quiet: The Power of Introverts in a World That Can't Stop Talking"
+  author: "Susan Cain"
+  published: 2012
+  url: "https://www.amazon.com/Quiet-Power-Introverts-World-Talking/dp/0307352153"
+  image_path: "/images/books/quiet.jpg"
+  note: >-
+    A defence of introverts in workplaces built almost entirely for extroverts. Worth
+    reading for how you run a meeting and who actually gets heard in one.
+
+- title: "Give & Take: Why Helping Others Drives Our Success"
+  author: "Adam Grant"
+  published: 2013
+  url: "https://www.amazon.com/Give-Take-Helping-Others-Success/dp/0143124986"
+  image_path: "/images/books/give-and-take.jpg"
+  note: >-
+    Grant sorts people into givers, takers and matchers, and argues the most
+    successful are often the most generous — provided they do not burn themselves out
+    being it.
+
+- title: "Start With Why: How Great Leaders Inspire Everyone to Take Action"
+  author: "Simon Sinek"
+  published: 2009
+  url: "https://www.amazon.com/Start-Why-Leaders-Inspire-Everyone/dp/1591846447"
+  image_path: "/images/books/start-with-why.jpg"
+  note: >-
+    The golden-circle argument: people buy the reason you built something before they
+    buy the thing itself. Repetitive, but the core idea earns its place.
+
+- title: "Principles: Life and Work"
+  author: "Ray Dalio"
+  published: 2017
+  url: "https://www.amazon.com/Principles-Life-Work-Ray-Dalio/dp/1501124021"
+  image_path: "/images/books/principles.jpg"
+  note: >-
+    Dalio's attempt to write down every rule he runs his life and his firm by. The
+    radical-transparency chapters are divisive; the case for making your decisions
+    explicit is the part that stays with you.
+
 - title: "Rework"
+  author: "Jason Fried & David Heinemeier Hansson"
+  published: 2010
   url: "https://www.amazon.com/Rework-Jason-Fried/dp/0307463745"
   image_path: "/images/books/rework.jpg"
+  note: >-
+    The one that started the 37signals trilogy. Deliberately contrarian about
+    planning, meetings and growth, and short enough to reread in an evening.
+
+- title: "Remote: Office Not Required"
+  author: "Jason Fried & David Heinemeier Hansson"
+  published: 2013
+  url: "https://www.amazon.com/Remote-Office-Required-Jason-Fried/dp/0804137501"
+  image_path: "/images/books/remote.jpg"
+  note: >-
+    Written in 2013, long before the argument was settled. Reads very differently now
+    that everyone has run the experiment whether they wanted to or not.
+
+- title: "It Doesn't Have to Be Crazy at Work"
+  author: "Jason Fried & David Heinemeier Hansson"
+  published: 2018
+  url: "https://www.amazon.com/Doesnt-Have-Be-Crazy-Work/dp/B07G8L5NZ9"
+  image_path: "/images/books/crazy-at-work.jpg"
+  note: >-
+    The argument that the permanent crisis most companies live in is self-inflicted.
+    Blunt, short chapters that are easy to disagree with productively.
