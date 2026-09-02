@@ -145,3 +145,25 @@
     - number: 8
       title: "A Parade of Horribles"
       published: 2026
+
+- title: "Project Hail Mary"
+  author: "Andy Weir"
+  shelf: fiction
+  status: read
+  published: 2021
+  url: "https://www.amazon.com/Project-Hail-Mary-Andy-Weir/dp/059335527X"
+  note: >-
+    A lone astronaut wakes with amnesia on a ship he does not remember boarding and
+    has to reason his way out from first principles. The problem-solving is the draw,
+    but the friendship at the centre of it is why the book stays with you.
+
+- title: "Red Rising"
+  author: "Pierce Brown"
+  shelf: fiction
+  status: reading
+  published: 2014
+  url: "https://www.amazon.com/Red-Rising-Pierce-Brown/dp/034553980X"
+  note: >-
+    A miner on Mars finds out his caste has been lied to for generations, and is
+    remade to infiltrate the ruling class from the inside. First of a long series, so
+    no verdict yet.
