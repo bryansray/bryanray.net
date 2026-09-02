@@ -1,0 +1,29 @@
+{{ define "main" }}
+<article class="article shell">
+  <header class="article-header">
+    <p class="eyebrow">What I’m up to</p>
+    <h1>{{ .Title }}</h1>
+    <div class="post-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">Last updated {{ .Date.Format "January 2, 2006" }}</time></div>
+  </header>
+  <div class="article-body">
+    {{ .Content }}
+
+    {{/* Generated from data/books.yaml so this much of the page stays true even
+         when the prose above has gone stale. */}}
+    {{- $reading := where hugo.Data.books "status" "reading" }}
+    {{- with $reading }}
+    <h2>Reading right now</h2>
+    <ul>
+      {{- range . }}
+      <li><a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .title }}</a> by {{ .author }}</li>
+      {{- end }}
+    </ul>
+    <p><a class="text-link" href="{{ "bookshelf/" | relURL }}">The whole bookshelf →</a></p>
+    {{- end }}
+  </div>
+  <nav class="article-nav" aria-label="More about me">
+    <a href="{{ "about/" | relURL }}"><small>More</small><span>← About me</span></a>
+    <a class="next" href="{{ "uses/" | relURL }}"><small>More</small><span>What I use →</span></a>
+  </nav>
+</article>
+{{ end }}

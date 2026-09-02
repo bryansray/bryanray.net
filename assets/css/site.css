@@ -55,6 +55,8 @@ h1,h2,h3 { margin:0; font-weight:800; line-height:1.08; letter-spacing:-.045em; 
 .portrait-frame img { aspect-ratio:1; object-fit:cover; border-radius:inherit; filter:saturate(.75); }
 .availability { display:flex; align-items:center; justify-content:center; gap:9px; width:max-content; margin:20px auto 0; color:var(--muted); font-size:12px; font-weight:700; }
 .availability span { width:8px; height:8px; border-radius:50%; background:#48a872; box-shadow:0 0 0 5px rgba(72,168,114,.16); }
+a.availability { text-decoration:none; transition:color .2s ease; }
+a.availability:hover { color:var(--ink); }
 
 .home-section { padding-block:90px; }
 .section-heading { display:flex; justify-content:space-between; align-items:end; gap:32px; margin-bottom:38px; }

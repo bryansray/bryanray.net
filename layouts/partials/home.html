@@ -14,7 +14,7 @@
         <img src="{{ $fallback.RelPermalink }}" alt="Bryan Ray" width="{{ $fallback.Width }}" height="{{ $fallback.Height }}" decoding="async">
       </picture>
     </div>
-    <div class="availability"><span></span> Always making something</div>
+    <a class="availability" href="{{ "now/" | relURL }}"><span></span> Always making something</a>
   </div>
 </section>
 <section class="home-section shell"><div class="section-heading"><div><p class="eyebrow">From the notebook</p><h2>Latest notes</h2></div><a class="text-link" href="{{ "posts/" | relURL }}">Browse the notebook →</a></div><div class="post-grid">{{ range first 3 (where .Site.RegularPages "Section" "posts") }}{{ partial "post-card.html" . }}{{ end }}</div></section>

@@ -12,4 +12,4 @@ Outside of work, I'm a father. I also write, read, make the occasional video, an
 
 I enjoy working with thoughtful people who have reasonable expectations and interesting problems to solve. If you need help with a development team, codebase, architecture, infrastructure, or software design, I'd be glad to hear from you.
 
-[LinkedIn](https://www.linkedin.com/in/bryanray) · [GitHub](https://github.com/bryansray) · [YouTube](https://www.youtube.com/channel/UCXqDkMvxMIccERjvVLZnaAw) · [Bookshelf](/bookshelf/) · [Uses](/uses/)
+[LinkedIn](https://www.linkedin.com/in/bryanray) · [GitHub](https://github.com/bryansray) · [YouTube](https://www.youtube.com/channel/UCXqDkMvxMIccERjvVLZnaAw) · [Bookshelf](/bookshelf/) · [Uses](/uses/) · [Now](/now/)
