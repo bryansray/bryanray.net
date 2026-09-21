@@ -4,7 +4,14 @@
     {
       "name": "hugo",
       "runtimeExecutable": "hugo",
-      "runtimeArgs": ["server", "--noBuildLock", "--port", "1314"],
+      "runtimeArgs": ["server", "--noBuildLock", "--renderToMemory", "--port", "1314"],
+      "port": 1314,
+      "autoPort": false
+    },
+    {
+      "name": "hugo-dev",
+      "runtimeExecutable": "hugo",
+      "runtimeArgs": ["server", "--noBuildLock", "--renderToMemory", "--environment", "development", "--buildDrafts", "--buildFuture", "--buildExpired", "--port", "1314"],
       "port": 1314,
       "autoPort": false
     }
