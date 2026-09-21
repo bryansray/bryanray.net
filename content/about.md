@@ -10,6 +10,6 @@ I care about thoughtful design, practical solutions, and leaving things better t
 
 Outside of work, I'm a father. I also write, read, make the occasional video, and follow whatever curiosity has my attention at the moment. This site is where I share some of what I'm building, learning, and thinking about along the way.
 
-I enjoy working with thoughtful people who have reasonable expectations and interesting problems to solve. If you need help with a development team, codebase, architecture, infrastructure, or software design, I'd be glad to hear from you.
+I enjoy working with thoughtful people who have reasonable expectations and interesting problems to solve. If you need help with a development team, codebase, architecture, infrastructure, or software design, I'd be glad to hear from you. [Here's how I work with clients →](/work/)
 
 [LinkedIn](https://www.linkedin.com/in/bryanray) · [GitHub](https://github.com/bryansray) · [YouTube](https://www.youtube.com/channel/UCXqDkMvxMIccERjvVLZnaAw) · [Bookshelf](/bookshelf/) · [Uses](/uses/) · [Now](/now/)
