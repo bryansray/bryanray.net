@@ -11,7 +11,9 @@ layout: work
 #   - `availability` is blank on purpose. Set it (e.g. "Taking two retainer
 #     clients this quarter") and it renders under the hero buttons.
 #   - The Corva projects are described at the level of a résumé. Check that
-#     naming them — StreamR in particular, which is internal — is fine with Corva.
+#     naming them is fine with Corva. StreamR is a personal experiment, not a
+#     Corva product; if it was built on Corva time or hardware, confirm your IP
+#     agreement doesn't cover it before calling it yours.
 
 email: "bryan@bryanray.net"
 calendar: "https://fantastical.app/bryanray/availability"
@@ -94,7 +96,7 @@ terms:
     - "Rolling over unused hours"
 
 proof:
-  intro: "My day job is at Corva, a real-time data platform for oil and gas drilling. A few things I have built or worked on there:"
+  intro: "My day job is at Corva, a real-time data platform for oil and gas drilling. Two things I have built or worked on there, and one experiment of my own:"
   items:
     - title: "Corva CLI & MCP server"
       description: "A Python CLI and Model Context Protocol server that gives engineers and AI assistants direct, typed access to Corva's platform: assets, wells, rigs, apps, and datasets. Ships with schema validation and OpenTelemetry tracing."
@@ -103,7 +105,7 @@ proof:
       description: "Contributed to a real-time streaming app on AWS Lambda that processes live rig telemetry, runs ML-driven optimization, and sends parameter recommendations back to rig control systems."
       tags: ["Python", "AWS Lambda", "ML", "Streaming"]
     - title: "StreamR & StreamR UI"
-      description: "A prototype ingestion pipeline: Rust services that poll WITSML sources, publish through NATS JetStream, and land time-series data in MongoDB, plus an operator UI for managing streams, connections, and mappings."
+      description: "A personal experiment in streaming ingestion: Rust services that poll WITSML drilling-data sources, publish through NATS JetStream, and land time-series data in MongoDB, plus an operator UI for managing streams, connections, and mappings."
       tags: ["Rust", "NATS", "MongoDB", "SolidStart"]
 
 audit:
