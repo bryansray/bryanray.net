@@ -21,13 +21,14 @@ check:
 clean:
     rm -rf public resources .hugo_build.lock
 
-# Serve the site locally.
+# Serve the site locally. Renders to memory: Hugo's server otherwise writes into
+# public/, where a concurrent `just build` overwrites pages with production URLs.
 serve:
-    hugo server --noBuildLock
+    hugo server --noBuildLock --renderToMemory
 
 # Run the local development server with unpublished content included.
 dev:
-    hugo server --noBuildLock --environment development --buildDrafts --buildFuture --buildExpired
+    hugo server --noBuildLock --renderToMemory --environment development --buildDrafts --buildFuture --buildExpired
 
 # Backwards-compatible long name for `dev`.
 develop: dev
