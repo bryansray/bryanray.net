@@ -22,14 +22,14 @@ availability: ""
 hero:
   eyebrow: "Work with me"
   heading: "A senior engineer for your product, without the full-time hire."
-  lede: "Monthly, async help for indie SaaS and bootstrapped B2B teams. Work lands in Slack or Linear, you get written updates instead of standups, and the scope is clear before the month starts."
+  lede: "Monthly, async help for indie SaaS and bootstrapped B2B teams. I work in the chat and issue tracker your team already uses, send written updates instead of holding standups, and agree on scope before the month starts."
 
 fit:
   for:
     - "You have a product in production with paying users."
     - "You need features, integrations, or internal tools, but not a full-time hire."
     - "Your stack is near Python, C#/.NET, React, TypeScript, or Postgres."
-    - "You would rather read a written update or watch a Loom than sit in a meeting."
+    - "You would rather read a written update or watch a short recorded walkthrough than sit in a meeting."
   notFor:
     - "Idea-stage products with no users yet."
     - "Equity-only or lowest-hourly-rate work."
@@ -42,7 +42,7 @@ steps:
   - title: "Pick a tier and a first outcome"
     text: "We agree on a tier and one concrete result for the first month, so you know what you are paying for."
   - title: "Work happens where you already are"
-    text: "Slack or Linear. Written replies within one business day, Monday to Friday."
+    text: "Your chat, your issue tracker, your repo. Written replies within one business day, Monday to Friday."
   - title: "A monthly summary"
     text: "What shipped, what is next, and anything I think you should know. Cancel any time after the current period."
 
@@ -55,7 +55,7 @@ tiers:
     items:
       - "Small features, bug fixes, and integrations"
       - "Best-effort work from a shared queue"
-      - "Async in Slack or Linear"
+      - "Async, in the tools you already use"
       - "Monthly written summary"
   - name: "Build"
     price: "$3,500"
@@ -66,7 +66,7 @@ tiers:
     items:
       - "A prioritized backlog we keep together"
       - "One committed, meaningful ship every month"
-      - "Loom walkthroughs when something lands"
+      - "Recorded walkthroughs when something lands"
       - "Everything in Care"
   - name: "Partner"
     price: "Custom"
@@ -84,13 +84,13 @@ sprint:
 
 terms:
   included:
-    - "Async communication in Slack or Linear"
+    - "Async communication in your existing chat and issue tracker"
     - "Written replies within one business day, Mon–Fri"
     - "A monthly summary of what shipped and what is next"
     - "You own all the code and work product"
     - "Billed monthly in advance, cancel any time after the current period"
   excluded:
-    - "Standing meetings (Looms and ad-hoc calls when useful)"
+    - "Standing meetings (recorded walkthroughs and ad-hoc calls when useful)"
     - "24/7 on-call"
     - "Equity-only arrangements"
     - "Rolling over unused hours"
@@ -115,7 +115,7 @@ audit:
 
 faq:
   - q: "Do we have to meet weekly?"
-    a: "No. The default is async. I will send a Loom when showing is faster than telling, and we can talk when something genuinely needs a conversation."
+    a: "No. The default is async. I will send a short recorded walkthrough when showing is faster than telling, and we can talk when something genuinely needs a conversation."
   - q: "Can I start with a short paid sprint?"
     a: "Yes. Most sprints are $1,500–$3,000 for about two weeks, and many retainers start that way."
   - q: "What if my stack is different?"
