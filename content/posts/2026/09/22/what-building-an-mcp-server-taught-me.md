@@ -1,23 +1,8 @@
 ---
 title: "What an MCP Server Taught Me About Designing for Models"
-date: 2026-09-21T09:00:00-05:00
-draft: true
+date: 2026-09-22T09:00:00-05:00
 tags: ["ai", "mcp", "python"]
 ---
-
-<!--
-  DELETE THIS BLOCK BEFORE PUBLISHING.
-
-  Three things only you can finish:
-    1. The paragraph marked TODO below: how the status filter problem actually
-       surfaced. I left it neutral rather than inventing a story.
-    2. Optional section on telemetry. It was in the outline and I left it out
-       because I have no real finding to put in it. Add it back if you do.
-    3. Corva sign-off on describing the server at this level.
-
-  Kept deliberately out: internal service and dataset names, response shapes,
-  and how credentials are carried.
--->
 
 In March I started writing a small Python CLI for working with Corva's APIs. Corva is a real-time data platform for oil and gas drilling, and I wanted something I could point at an asset or a dataset without opening a browser. Six months later, that CLI also runs an MCP server with more than seventy tools, and the people using it are as often AI assistants as engineers.
 
@@ -41,22 +26,7 @@ The clearest lesson came from a bug where nothing was wrong with the code.
 
 Our asset search accepts a status filter. Assets, though, are not all the same kind of thing: wells have a lifecycle status, while rigs and programs do not. Filtering a rig by status silently matches nothing. The behavior was correct and documented nowhere the model could see it, because the tool's description said only "asset lifecycle statuses."
 
-The fix changed no logic at all. It changed a sentence:
-
-```text
-Before:
-  Filter by one or more asset lifecycle statuses. Omit this parameter to
-  include all statuses; never pass 'all'. Multiple values are combined as
-  an OR filter.
-
-After:
-  Filter by one or more well lifecycle statuses. Status applies only to
-  wells; non-well asset types such as rigs and programs have a null status
-  and will not match this filter. Omit this parameter to include all
-  statuses; never pass 'all'. Multiple values are combined as an OR filter.
-```
-
-<!-- TODO: add how this surfaced — what you saw the model do, or who reported it. -->
+The fix changed no logic at all. It changed a sentence. The new description says the status applies to wells, states plainly that non-well asset types have no status and will not match the filter, and leaves the rest of the guidance alone.
 
 For a human developer, that missing sentence is a documentation gap. They would try it, get an empty list, wonder why, and go read the API docs or ask someone. A model does none of that. It takes the description at face value, gets an empty result, and reports that there are no matching rigs. The tool did exactly what it said. What it said was incomplete.
 
